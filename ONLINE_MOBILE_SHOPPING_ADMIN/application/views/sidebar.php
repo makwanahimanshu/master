@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Online Mobile Shopping</title>
+  <title>Material Dash</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="<?php echo $base.'assets/vendors/mdi/css/materialdesignicons.min.css';?>">
   <link rel="stylesheet" href="<?php echo $base.'assets/vendors/css/vendor.bundle.base.css';?>">
@@ -27,6 +27,7 @@
   <div class="body-wrapper">
     <!-- partial:partials/_sidebar.php -->
 
+
   <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open">
       <div class="mdc-drawer__header">
         <a href="<?php echo $base.'index.php';?>" class="brand-logo">
@@ -35,8 +36,8 @@
       </div>
       <div class="mdc-drawer__content">
         <div class="user-info">
-          <p class="name">Admin</p>
-          <p class="email">Admin@elenor.us</p>
+          <p class="name">Clyde Miles</p>
+          <p class="email">clydemiles@elenor.us</p>
         </div>
         <div class="mdc-list-group">
           <nav class="mdc-list mdc-drawer-menu">
@@ -46,13 +47,13 @@
                 Dashboard
               </a>
             </div>
-            <!-- <div class="mdc-list-item mdc-drawer-item">
+            <div class="mdc-list-item mdc-drawer-item">
               <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/basic_forms';?>">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">track_changes</i>
                 Forms
               </a>
-            </div> -->
-            <!-- <div class="mdc-list-item mdc-drawer-item">
+            </div>
+            <div class="mdc-list-item mdc-drawer-item">
               <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-menu">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">dashboard</i>
                 UI Features
@@ -72,28 +73,28 @@
                   </div>
                 </nav>
               </div>
-            </div> -->
-            <!-- <div class="mdc-list-item mdc-drawer-item">
+            </div>
+            <div class="mdc-list-item mdc-drawer-item">
               <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/basic_tables';?>">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">grid_on</i>
                 Tables
               </a>
-            </div> -->
-            <!-- <div class="mdc-list-item mdc-drawer-item">
+            </div>
+            <div class="mdc-list-item mdc-drawer-item">
               <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/chartjs';?>">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">pie_chart_outlined</i>
                 Charts
               </a>
-            </div> -->
+            </div>
             <div class="mdc-list-item mdc-drawer-item">
               <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="sample-page-submenu">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">pages</i>
-                My Account
+                Sample Pages
                 <i class="mdc-drawer-arrow material-icons">chevron_right</i>
               </a>
               <div class="mdc-expansion-panel" id="sample-page-submenu">
                 <nav class="mdc-list mdc-drawer-submenu">
-                  <!-- <div class="mdc-list-item mdc-drawer-item">
+                  <div class="mdc-list-item mdc-drawer-item">
                     <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/blank-page';?>">
                       Blank Page
                     </a>
@@ -117,7 +118,7 @@
                     <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/505';?>">
                       505
                     </a>
-                  </div> -->
+                  </div>
                   <div class="mdc-list-item mdc-drawer-item">
                     <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/login';?>">
                       Login
@@ -131,36 +132,36 @@
                 </nav>
               </div>
             </div>
-            <!-- <div class="mdc-list-item mdc-drawer-item">
+            <div class="mdc-list-item mdc-drawer-item">
               <a class="mdc-drawer-link" href="https://www.bootstrapdash.com/demo/material-admin-free/jquery/documentation/documentation.php" target="_blank">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">description</i>
                 Documentation
               </a>
-            </div> -->
+            </div>
           </nav>
         </div>
         <div class="profile-actions">
           <a href="javascript:;">Settings</a>
           <span class="divider"></span>
-          <a href="<?php echo $base.'index.php/welcome/login';?>">Logout</a>
+          <a href="javascript:;">Logout</a>
         </div>
-        <!-- <div class="mdc-card premium-card">
-            <div class="d-flex align-items-center">
-                  <div class="mdc-card icon-card box-shadow-0">
-                    <i class="mdi mdi-shield-outline"></i>
-                  </div>
-                  <div>
-                    <p class="mt-0 mb-1 ml-2 font-weight-bold tx-12">Material Dash</p>
-                    <p class="mt-0 mb-0 ml-2 tx-10">Pro available</p>
-                  </div>
+        <div class="mdc-card premium-card">
+          <div class="d-flex align-items-center">
+            <div class="mdc-card icon-card box-shadow-0">
+              <i class="mdi mdi-shield-outline"></i>
             </div>
-            <p class="tx-8 mt-3 mb-1">More elements. More Pages.</p>
-            <p class="tx-8 mb-3">Starting from $25.</p>
-            <a href="https://www.bootstrapdash.com/product/material-design-admin-template/" target="_blank">
-              <span class="mdc-button mdc-button--raised mdc-button--white">Upgrade to Pro</span>
-            </a>
-          </div> -->
-  </div>
+            <div>
+              <p class="mt-0 mb-1 ml-2 font-weight-bold tx-12">Material Dash</p>
+              <p class="mt-0 mb-0 ml-2 tx-10">Pro available</p>
+            </div>
+          </div>
+          <p class="tx-8 mt-3 mb-1">More elements. More Pages.</p>
+          <p class="tx-8 mb-3">Starting from $25.</p>
+          <a href="https://www.bootstrapdash.com/product/material-design-admin-template/" target="_blank">
+						<span class="mdc-button mdc-button--raised mdc-button--white">Upgrade to Pro</span>
+					</a>
+        </div>
+      </div>
     </aside>
 
 

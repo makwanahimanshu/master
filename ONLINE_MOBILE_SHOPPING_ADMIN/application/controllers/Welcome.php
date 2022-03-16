@@ -8,20 +8,25 @@ class Welcome extends CI_Controller {
 	// 	$this->load->view('welcome_message');
 	// }
 
-	// public function basic_forms()
-	// {
-	// 	$this->load->view('basic_forms');
-	// }
+	public function basic_forms()
+	{
+		$this->load->view('basic_forms');
+	}
+
+	public function sidebar()
+	{
+		$this->load->view('sidebar');
+	}
 
 	public function index()
 	{
 		$this->load->view('index');
 	}
 
-	// public function basic_tables()
-	// {
-	// 	$this->load->view('basic_tables');
-	// }
+	public function basic_tables()
+	{
+		$this->load->view('basic_tables');
+	}
 
 	public function login()
 	{
