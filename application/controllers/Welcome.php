@@ -15,11 +15,6 @@ class Welcome extends CI_Controller {
 		$this->load->view('basic_forms');
 	}
 
-	public function sidebar()
-	{
-		$this->load->view('sidebar');
-	}
-
 	public function dash()
 	{
 		$this->load->view('index');
