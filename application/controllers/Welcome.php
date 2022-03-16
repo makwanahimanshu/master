@@ -18,7 +18,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('sidebar');
 	}
 
-	public function index()
+	public function dash()
 	{
 		$this->load->view('index');
 	}

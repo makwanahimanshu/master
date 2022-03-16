@@ -1,13 +1,13 @@
 <!-- partial:../../partials/_sidebar.php -->
         <!-- $base.'index.php/Welcome/sidebar' -->
-        <?php include_once "sidebar.php"; ?>
+        <?php include ("sidebar.php"); ?>
          
          <!-- partial -->
      
          <div class="main-wrapper mdc-drawer-app-content">
            <!-- partial:../../partials/_navbar.php -->
            
-           <?php include_once "navbar.php"; ?>
+           <?php include ("navbar.php"); ?>
      
            <!-- partial -->
       <div class="page-wrapper mdc-toolbar-fixed-adjust">
