@@ -16,7 +16,7 @@
             <div class="mdc-layout-grid__inner">
               <div class="mdc-layout-grid__cell--span-12">
                 <div class="mdc-card">
-                  <h6 class="card-title">Product</h6>
+                  <h5 class="card-title"><b>Product</b></h5>
                   <div class="template-demo">
                     <!-- <div class="mdc-layout-grid__inner">
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
@@ -56,43 +56,70 @@
                           <div class="mdc-notched-outline">
                             <div class="mdc-notched-outline__leading"></div>
                             <div class="mdc-notched-outline__notch">
+                              <label for="text-field-hero-input" class="mdc-floating-label">Product Discription</label>
+                            </div>
+                            <div class="mdc-notched-outline__trailing"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                          <input class="mdc-text-field__input" id="text-field-hero-input">
+                          <div class="mdc-notched-outline">
+                            <div class="mdc-notched-outline__leading"></div>
+                            <div class="mdc-notched-outline__notch">
+                              <label for="text-field-hero-input" class="mdc-floating-label">Stock Quantity</label>
+                            </div>
+                            <div class="mdc-notched-outline__trailing"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                          <input class="mdc-text-field__input" id="text-field-hero-input">
+                          <div class="mdc-notched-outline">
+                            <div class="mdc-notched-outline__leading"></div>
+                            <div class="mdc-notched-outline__notch">
+                              <label for="text-field-hero-input" class="mdc-floating-label">Product Category</label>
+                            </div>
+                            <div class="mdc-notched-outline__trailing"></div>
+                          </div>
+                        </div>
+                      </div>
+            
+                    
+                    <div class="mdc-select demo-width-class" data-mdc-auto-init="MDCSelect">
+                      <input type="hidden" name="enhanced-select">
+                        <i class="mdc-select__dropdown-icon"></i>
+                        <div class="mdc-select__selected-text"></div> 
+                            <div class="mdc-select__menu mdc-menu-surface demo-width-class">
+                                <ul class="mdc-list">
+                                <li class="mdc-list-item mdc-list-item--selected" data-value="" aria-selected="true">
+                                </li>
+                                <li class="mdc-list-item" data-value="grains">
+                                    Bread, Cereal, Rice, and Pasta
+                                </li>
+                                <li class="mdc-list-item" data-value="vegetables">
+                                    Vegetables
+                                </li>
+                                <li class="mdc-list-item" data-value="fruit">
+                                    Fruit
+                                </li>
+                                </ul>
+                            </div>
+                                <span class="mdc-floating-label">Pick a Food Group</span>
+                               
+                            <div class="mdc-line-ripple"></div>
+                          </div>
+                 
+                  
+                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                          <input class="mdc-text-field__input" id="text-field-hero-input">
+                          <div class="mdc-notched-outline">
+                            <div class="mdc-notched-outline__leading"></div>
+                            <div class="mdc-notched-outline__notch">
                               <label for="text-field-hero-input" class="mdc-floating-label">Product Price</label>
-                            </div>
-                            <div class="mdc-notched-outline__trailing"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field mdc-text-field--outlined">
-                          <input class="mdc-text-field__input" id="text-field-hero-input">
-                          <div class="mdc-notched-outline">
-                            <div class="mdc-notched-outline__leading"></div>
-                            <div class="mdc-notched-outline__notch">
-                              <label for="text-field-hero-input" class="mdc-floating-label">Quantity</label>
-                            </div>
-                            <div class="mdc-notched-outline__trailing"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field mdc-text-field--outlined">
-                          <input class="mdc-text-field__input" id="text-field-hero-input">
-                          <div class="mdc-notched-outline">
-                            <div class="mdc-notched-outline__leading"></div>
-                            <div class="mdc-notched-outline__notch">
-                              <label for="text-field-hero-input" class="mdc-floating-label">Categories</label>
-                            </div>
-                            <div class="mdc-notched-outline__trailing"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field mdc-text-field--outlined">
-                          <input class="mdc-text-field__input" id="text-field-hero-input">
-                          <div class="mdc-notched-outline">
-                            <div class="mdc-notched-outline__leading"></div>
-                            <div class="mdc-notched-outline__notch">
-                              <label for="text-field-hero-input" class="mdc-floating-label">Discription</label>
                             </div>
                             <div class="mdc-notched-outline__trailing"></div>
                           </div>
@@ -105,6 +132,11 @@
                                 </button>
                             </div>
                         </div>
+                        <!-- <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
+                          <a href="<?php echo $base.' '; ?>" class="mdc-button mdc-button--raised w-100">
+                            Login
+                          </a>
+                        </div> -->
 
                       <!-- <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon">

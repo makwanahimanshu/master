@@ -352,7 +352,7 @@
         <main class="content-wrapper">
           <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
-              
+
               <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-8-tablet">
                 <div class="mdc-card">
                   <h6 class="card-title">Text Buttons</h6>
@@ -399,6 +399,7 @@
                     <button class="mdc-button mdc-button--raised">
                       Baseline
                     </button>
+                    
                     <button class="mdc-button mdc-button--raised mdc-button--dense">
                       Dense
                     </button>
