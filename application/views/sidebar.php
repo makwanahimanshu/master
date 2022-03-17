@@ -48,12 +48,42 @@
               </a>
             </div>
             <div class="mdc-list-item mdc-drawer-item">
+              <a class="mdc-drawer-link" href="#" >
+                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">devices</i>
+                Product Master
+              </a>
+            </div>
+            <div class="mdc-list-item mdc-drawer-item">
+              <a class="mdc-drawer-link" href="#" >
+                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">dashboard</i>
+                Brand Master
+              </a>
+            </div>
+              <div class="mdc-list-item mdc-drawer-item">
+              <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/basic_forms';?>" >
+                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">list</i>
+                Order Master
+              </a>
+            </div>
+            <div class="mdc-list-item mdc-drawer-item">
+              <a class="mdc-drawer-link" href="#" >
+                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">person</i>
+                User Master
+              </a>
+            </div>
+            <div class="mdc-list-item mdc-drawer-item">
+              <a class="mdc-drawer-link" href="#" >
+                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">contacts</i>
+                Contact Us
+              </a>
+            </div>
+            <!-- <div class="mdc-list-item mdc-drawer-item">
               <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/basic_forms';?>">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">track_changes</i>
                 Forms
               </a>
-            </div>
-            <div class="mdc-list-item mdc-drawer-item">
+            </div> -->
+            <!-- <div class="mdc-list-item mdc-drawer-item">
               <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-menu">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">dashboard</i>
                 UI Features
@@ -73,8 +103,8 @@
                   </div>
                 </nav>
               </div>
-            </div>
-            <div class="mdc-list-item mdc-drawer-item">
+            </div>  -->
+            <!-- <div class="mdc-list-item mdc-drawer-item">
               <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/basic_tables';?>">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">grid_on</i>
                 Tables
@@ -85,16 +115,16 @@
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">pie_chart_outlined</i>
                 Charts
               </a>
-            </div>
+            </div> -->
             <div class="mdc-list-item mdc-drawer-item">
               <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="sample-page-submenu">
-                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">pages</i>
-                Sample Pages
+                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">settings</i>
+                Account
                 <i class="mdc-drawer-arrow material-icons">chevron_right</i>
               </a>
               <div class="mdc-expansion-panel" id="sample-page-submenu">
                 <nav class="mdc-list mdc-drawer-submenu">
-                  <div class="mdc-list-item mdc-drawer-item">
+                  <!-- <div class="mdc-list-item mdc-drawer-item">
                     <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/blank-page';?>">
                       Blank Page
                     </a>
@@ -118,7 +148,7 @@
                     <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/505';?>">
                       505
                     </a>
-                  </div>
+                  </div> -->
                   <div class="mdc-list-item mdc-drawer-item">
                     <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/login';?>">
                       Login
@@ -132,12 +162,12 @@
                 </nav>
               </div>
             </div>
-            <div class="mdc-list-item mdc-drawer-item">
+             <!-- <div class="mdc-list-item mdc-drawer-item">
               <a class="mdc-drawer-link" href="https://www.bootstrapdash.com/demo/material-admin-free/jquery/documentation/documentation.php" target="_blank">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">description</i>
                 Documentation
               </a>
-            </div>
+            </div>  -->
           </nav>
         </div>
         <div class="profile-actions">
@@ -145,7 +175,7 @@
           <span class="divider"></span>
           <a href="javascript:;">Logout</a>
         </div>
-        <div class="mdc-card premium-card">
+        <!-- <div class="mdc-card premium-card">
           <div class="d-flex align-items-center">
             <div class="mdc-card icon-card box-shadow-0">
               <i class="mdi mdi-shield-outline"></i>
@@ -160,8 +190,8 @@
           <a href="https://www.bootstrapdash.com/product/material-design-admin-template/" target="_blank">
 						<span class="mdc-button mdc-button--raised mdc-button--white">Upgrade to Pro</span>
 					</a>
-        </div>
-      </div>
+          </div>
+         </div> -->
     </aside>
 
 
