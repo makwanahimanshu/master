@@ -7,7 +7,7 @@
       <?php include_once "navbar.php"; ?>
       <!-- partial -->
 
-      <div class="page-wrapper mdc-toolbar-fixed-adjust">
+      <!-- <div class="page-wrapper mdc-toolbar-fixed-adjust">
         <main class="content-wrapper">
           <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
@@ -300,10 +300,10 @@
                     </table>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
                 <div class="mdc-card p-0">
-                  <h6 class="card-title card-padding pb-0">Striped Table</h6>
+                  <h6 class="card-title card-padding pb-0">Orders</h6>
                   <div class="table-responsive">
                     <table class="table table-striped">
                       <thead>

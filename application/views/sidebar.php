@@ -31,13 +31,13 @@
   <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open">
       <div class="mdc-drawer__header">
         <a href="<?php echo $base.' ';?>" class="brand-logo">
-          <img src="<?php echo $base.'assets/images/logo.svg';?>" alt="logo">
+          <img src="<?php echo $base.'assets/images/logo2.png';?>" height="55px" alt="logo">
         </a>
       </div>
       <div class="mdc-drawer__content">
           <div class="user-info">
-            <p class="name">E shop</p>
-            <p class="email">Eshop@about.us</p>
+            <!-- <p class="name">E shop</p> -->
+            <!-- <p class="email">Eshop@about.us</p> -->
           </div>
         <div class="mdc-list-group">
         <nav class="mdc-list mdc-drawer-menu">
@@ -48,13 +48,13 @@
               </a>
             </div>
             <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/basic_tables';?>" >
+              <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/product';?>" >
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">devices</i>
                 Product Master
               </a>
             </div>
             <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-drawer-link" href="#" >
+              <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/basic_forms';?>" >
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">sort</i>
                 Category Master
               </a>
@@ -66,7 +66,7 @@
               </a>
             </div>
               <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/basic_forms';?>" >
+              <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/basic_tables';?>" >
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">list</i>
                 Order Master
               </a>

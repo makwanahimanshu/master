@@ -27,9 +27,9 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('login');
 	}
-	public function forgot_pass()
+	public function product()
 	{
-		$this->load->view('forgot_pass');
+		$this->load->view('product');
 	}
 
 	public function register()
