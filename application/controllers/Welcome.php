@@ -31,7 +31,14 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('product');
 	}
-
+	public function category()
+	{
+		$this->load->view('category');
+	}
+	public function brand()
+	{
+		$this->load->view('brand');
+	}
 	public function register()
 	{
 		$this->load->view('register');

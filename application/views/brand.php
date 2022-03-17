@@ -16,7 +16,7 @@
             <div class="mdc-layout-grid__inner">
               <div class="mdc-layout-grid__cell--span-12">
                 <div class="mdc-card">
-                  <h5 class="card-title"><b>Product</b></h5>
+                  <h5 class="card-title"><b>Brand</b></h5>
                   <div class="template-demo">
                     <!-- <div class="mdc-layout-grid__inner">
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
@@ -26,57 +26,8 @@
                           <label for="text-field-hero-input" class="mdc-floating-label">Name</label>
                         </div>
                       </div> -->
-                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field mdc-text-field--outlined">
-                          <input type="text" class="mdc-text-field__input" id="text-field-hero-input">
-                          <div class="mdc-notched-outline">
-                            <div class="mdc-notched-outline__leading"></div>
-                            <div class="mdc-notched-outline__notch">
-                              <label for="text-field-hero-input" class="mdc-floating-label">Product Name</label>
-                            </div>
-                            <div class="mdc-notched-outline__trailing"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field mdc-text-field--outlined">
-                          <input type="file" class="mdc-text-field__input" id="text-field-hero-input">
-                          <div class="mdc-notched-outline">
-                            <div class="mdc-notched-outline__leading"></div>
-                            <div class="mdc-notched-outline__notch">
-                              <label for="text-field-hero-input" class="mdc-floating-label">Image</label>
-                            </div>
-                            <div class="mdc-notched-outline__trailing"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field mdc-text-field--outlined">
-                          <input class="mdc-text-field__input" id="text-field-hero-input">
-                          <div class="mdc-notched-outline">
-                            <div class="mdc-notched-outline__leading"></div>
-                            <div class="mdc-notched-outline__notch">
-                              <label for="text-field-hero-input" class="mdc-floating-label">Product Discription</label>
-                            </div>
-                            <div class="mdc-notched-outline__trailing"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field mdc-text-field--outlined">
-                          <input class="mdc-text-field__input" id="text-field-hero-input">
-                          <div class="mdc-notched-outline">
-                            <div class="mdc-notched-outline__leading"></div>
-                            <div class="mdc-notched-outline__notch">
-                              <label for="text-field-hero-input" class="mdc-floating-label">Stock Quantity</label>
-                            </div>
-                            <div class="mdc-notched-outline__trailing"></div>
-                          </div>
-                        </div>
-                    </div>
-            
-                    
-                    <div class="mdc-select demo-width-class" data-mdc-auto-init="MDCSelect">
+                     
+                      <div class="mdc-select demo-width-class" data-mdc-auto-init="MDCSelect">
                       <input type="hidden" name="enhanced-select">
                         <i class="mdc-select__dropdown-icon"></i>
                         <div class="mdc-select__selected-text"></div> 
@@ -99,24 +50,25 @@
                                
                             <div class="mdc-line-ripple"></div>
                           </div>
-                 
-                  
-                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+
+                          <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field mdc-text-field--outlined">
-                          <input class="mdc-text-field__input" id="text-field-hero-input">
+                          <input type="text" class="mdc-text-field__input" id="text-field-hero-input">
                           <div class="mdc-notched-outline">
                             <div class="mdc-notched-outline__leading"></div>
                             <div class="mdc-notched-outline__notch">
-                              <label for="text-field-hero-input" class="mdc-floating-label">Product Price</label>
+                              <label for="text-field-hero-input" class="mdc-floating-label">Brand Name</label>
                             </div>
                             <div class="mdc-notched-outline__trailing"></div>
                           </div>
                         </div>
                       </div>
+                 
+                  
                       <div class="mdc-layout-grid">
                             <div class="d-grid gap-2 col-6 mx-auto">
                                <button class="mdc-button mdc-button--raised">
-                                   Add Product
+                                   Add Brand
                                 </button>
                             </div>
                         </div>
