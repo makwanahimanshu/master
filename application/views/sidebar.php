@@ -30,14 +30,14 @@
 
   <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open">
       <div class="mdc-drawer__header">
-        <a href="<?php echo $base.'index.php';?>" class="brand-logo">
+        <a href="<?php echo $base.' ';?>" class="brand-logo">
           <img src="<?php echo $base.'assets/images/logo.svg';?>" alt="logo">
         </a>
       </div>
       <div class="mdc-drawer__content">
           <div class="user-info">
-            <p class="name">Clyde Miles</p>
-            <p class="email">clydemiles@elenor.us</p>
+            <p class="name">E shop</p>
+            <p class="email">Eshop@about.us</p>
           </div>
         <div class="mdc-list-group">
         <nav class="mdc-list mdc-drawer-menu">
@@ -48,9 +48,15 @@
               </a>
             </div>
             <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-drawer-link" href="#" >
+              <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/basic_tables';?>" >
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">devices</i>
                 Product Master
+              </a>
+            </div>
+            <div class="mdc-list-item mdc-drawer-item">
+              <a class="mdc-drawer-link" href="#" >
+                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">sort</i>
+                Category Master
               </a>
             </div>
             <div class="mdc-list-item mdc-drawer-item">

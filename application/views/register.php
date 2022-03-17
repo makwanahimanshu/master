@@ -82,7 +82,7 @@
                           <a href="#">Forgot Password</a>
                         </div>
                         <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
-                          <a href="<?php echo $base.'index.php';?>" class="mdc-button mdc-button--raised w-100">
+                          <a href="<?php echo $base.' ';?>" class="mdc-button mdc-button--raised w-100">
                             Register
                           </a>
                         </div>

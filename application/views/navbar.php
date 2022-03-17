@@ -2,7 +2,7 @@
         <div class="mdc-top-app-bar__row">
           <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
             <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button sidebar-toggler">menu</button>
-            <span class="mdc-top-app-bar__title">Greetings Clyde!</span>
+            <span class="mdc-top-app-bar__title">Hy Admin!</span>
             <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon search-text-field d-none d-md-flex">
               <i class="material-icons mdc-text-field__icon">search</i>
               <input class="mdc-text-field__input" id="text-field-hero-input">
@@ -22,7 +22,7 @@
                   <span class="figure">
                     <img src="<?php echo $base.'assets/images/faces/face1.jpg';?>" alt="user" class="user">
                   </span>
-                  <span class="user-name">Clyde Miles</span>
+                  <span class="user-name">Admin</span>
                 </span>
               </button>
               <div class="mdc-menu mdc-menu-surface" tabindex="-1">
@@ -77,7 +77,7 @@
                 <i class="mdi mdi-bell"></i>
               </button>
               <div class="mdc-menu mdc-menu-surface" tabindex="-1">
-                <h6 class="title"> <i class="mdi mdi-bell-outline mr-2 tx-16"></i> Notifications</h6>
+                <h6 class="title"> <i class="mdi mdi-bell-outline mr-2 tx-16"></i> Feedback</h6>
                 <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
                   <li class="mdc-list-item" role="menuitem">
                     <div class="item-thumbnail item-thumbnail-icon">
@@ -118,14 +118,14 @@
                 </ul>
               </div>
             </div>
-            <div class="menu-button-container">
+            <!-- <div class="menu-button-container">
               <button class="mdc-button mdc-menu-button">
                 <i class="mdi mdi-email"></i>
                 <span class="count-indicator">
                   <span class="count">3</span>
                 </span>
-              </button>
-              <div class="mdc-menu mdc-menu-surface" tabindex="-1">
+              </button> 
+                <div class="mdc-menu mdc-menu-surface" tabindex="-1">
                 <h6 class="title"><i class="mdi mdi-email-outline mr-2 tx-16"></i> Messages</h6>
                 <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
                   <li class="mdc-list-item" role="menuitem">
@@ -157,8 +157,8 @@
                     </div>
                   </li>                
                 </ul>
-              </div>
-            </div>
+                </div>
+            </div> -->
             <div class="menu-button-container d-none d-md-block">
               <button class="mdc-button mdc-menu-button">
                 <i class="mdi mdi-arrow-down-bold-box"></i>
