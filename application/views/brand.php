@@ -1,118 +1,165 @@
-    <!-- partial:../../partials/_sidebar.php -->
-        <!-- $base.'index.php/Welcome/sidebar' -->
-        <?php include_once "sidebar.php"; ?>
-         
-         <!-- partial -->
-     
-         <div class="main-wrapper mdc-drawer-app-content">
-           <!-- partial:../../partials/_navbar.php -->
-           
-           <?php include_once "navbar.php"; ?>
-     
-           <!-- partial -->
-        <div class="page-wrapper mdc-toolbar-fixed-adjust">
-        <main class="content-wrapper">
-           <div class="mdc-layout-grid">
-            <div class="mdc-layout-grid__inner">
-              <div class="mdc-layout-grid__cell--span-12">
-                <div class="mdc-card">
-                  <h5 class="card-title"><b>Brand</b></h5>
-                  <div class="template-demo">
-                    <!-- <div class="mdc-layout-grid__inner">
-                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field">
-                          <input class="mdc-text-field__input" id="text-field-hero-input">
-                          <div class="mdc-line-ripple"></div>
-                          <label for="text-field-hero-input" class="mdc-floating-label">Name</label>
-                        </div>
-                      </div> -->
-                     
-                      <div class="mdc-select demo-width-class" data-mdc-auto-init="MDCSelect">
-                      <input type="hidden" name="enhanced-select">
-                        <i class="mdc-select__dropdown-icon"></i>
-                        <div class="mdc-select__selected-text"></div> 
-                            <div class="mdc-select__menu mdc-menu-surface demo-width-class">
-                                <ul class="mdc-list">
-                                <li class="mdc-list-item mdc-list-item--selected" data-value="" aria-selected="true">
-                                </li>
-                                <li class="mdc-list-item" data-value="mobile">
-                                    Mobile
-                                </li>
-                                <li class="mdc-list-item" data-value="watch">
-                                    Watch
-                                </li>
-                                <li class="mdc-list-item" data-value="accessory">
-                                     Accessory
-                                </li>
-                                </ul>
-                            </div>
-                                <span class="mdc-floating-label">Product Category</span>
-                               
-                            <div class="mdc-line-ripple"></div>
-                          </div>
+<?php
+include("header.php");
+?>
 
-                          <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field mdc-text-field--outlined">
-                          <input type="text" class="mdc-text-field__input" id="text-field-hero-input">
-                          <div class="mdc-notched-outline">
-                            <div class="mdc-notched-outline__leading"></div>
-                            <div class="mdc-notched-outline__notch">
-                              <label for="text-field-hero-input" class="mdc-floating-label">Brand Name</label>
-                            </div>
-                            <div class="mdc-notched-outline__trailing"></div>
-                          </div>
-                        </div>
-                      </div>
-                 
-                  
-                      <div class="mdc-layout-grid">
-                            <div class="d-grid gap-2 col-6 mx-auto">
-                               <button class="mdc-button mdc-button--raised">
-                                   Add Brand
-                                </button>
-                            </div>
-                        </div>
-                        <!-- <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
-                          <a href="<?php echo $base.' '; ?>" class="mdc-button mdc-button--raised w-100">
-                            Login
-                          </a>
-                        </div> -->
-
-                      <!-- <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon">
-                          <i class="material-icons mdc-text-field__icon">favorite</i>
-                          <input class="mdc-text-field__input" id="text-field-hero-input">
-                          <div class="mdc-notched-outline">
-                            <div class="mdc-notched-outline__leading"></div>
-                            <div class="mdc-notched-outline__notch">
-                              <label for="text-field-hero-input" class="mdc-floating-label">Name</label>
-                            </div>
-                            <div class="mdc-notched-outline__trailing"></div>
-                          </div>
-                        </div>
-                      </div> -->
-                      <!-- <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon">
-                          <i class="material-icons mdc-text-field__icon">visibility</i>
-                          <input class="mdc-text-field__input" id="text-field-hero-input">
-                          <div class="mdc-notched-outline">
-                                 <div class="mdc-notched-outline__leading"></div> 
-                                 <div class="mdc-notched-outline__notch">
-                              <label for="text-field-hero-input" class="mdc-floating-label">Name</label>
-                            </div> 
-                             <div class="mdc-notched-outline__trailing"></div> 
-                          </div>
-                        </div>
-                      </div> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
+        
+        <!-- Breadcrumb Start -->
+        <div class="breadcrumb-wrap">
+            <div class="container-fluid">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="<?php echo $base.'Dashboard/index'; ?>">Home</a></li>
+                    
+                    <li class="breadcrumb-item active"><a href="<?php echo $base.'index.php/Cart/crt'; ?>">Cart</a></li>
+                </ul>
             </div>
-          </div>
-          </main>
-
-             <!-- partial:../../partials/_footer.php -->
-             
-             <?php include("footer.php"); ?> 
-             <!-- partial -->
+        </div>
+        <!-- Breadcrumb End -->
+        
+        <!-- Cart Start -->
+        <div class="cart-page">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="cart-page-inner">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Price</th>
+                                            <th>Quantity</th>
+                                            <th>Total</th>
+                                            <th>Remove</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="align-middle">
+                                        <tr>
+                                            <td>
+                                                <div class="img">
+                                                    <a href="#"><img src="<?php echo $base.'assets/img/product-1.jpg';?>" alt="Image"></a>
+                                                    <p>Product Name</p>
+                                                </div>
+                                            </td>
+                                            <td>$99</td>
+                                            <td>
+                                                <div class="qty">
+                                                    <button class="btn-minus"><i class="fa fa-minus"></i></button>
+                                                    <input type="text" value="1">
+                                                    <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                                </div>
+                                            </td>
+                                            <td>$99</td>
+                                            <td><button><i class="fa fa-trash"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="img">
+                                                    <a href="#"><img src="<?php echo $base.'assets/img/product-2.jpg';?>" alt="Image"></a>
+                                                    <p>Product Name</p>
+                                                </div>
+                                            </td>
+                                            <td>$99</td>
+                                            <td>
+                                                <div class="qty">
+                                                    <button class="btn-minus"><i class="fa fa-minus"></i></button>
+                                                    <input type="text" value="1">
+                                                    <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                                </div>
+                                            </td>
+                                            <td>$99</td>
+                                            <td><button><i class="fa fa-trash"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="img">
+                                                    <a href="#"><img src="<?php echo $base.'assets/img/product-3.jpg';?>" alt="Image"></a>
+                                                    <p>Product Name</p>
+                                                </div>
+                                            </td>
+                                            <td>$99</td>
+                                            <td>
+                                                <div class="qty">
+                                                    <button class="btn-minus"><i class="fa fa-minus"></i></button>
+                                                    <input type="text" value="1">
+                                                    <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                                </div>
+                                            </td>
+                                            <td>$99</td>
+                                            <td><button><i class="fa fa-trash"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="img">
+                                                    <a href="#"><img src="<?php echo $base.'assets/img/product-4.jpg';?>" alt="Image"></a>
+                                                    <p>Product Name</p>
+                                                </div>
+                                            </td>
+                                            <td>$99</td>
+                                            <td>
+                                                <div class="qty">
+                                                    <button class="btn-minus"><i class="fa fa-minus"></i></button>
+                                                    <input type="text" value="1">
+                                                    <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                                </div>
+                                            </td>
+                                            <td>$99</td>
+                                            <td><button><i class="fa fa-trash"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="img">
+                                                    <a href="#"><img src="<?php echo $base.'assets/img/product-5.jpg';?>" alt="Image"></a>
+                                                    <p>Product Name</p>
+                                                </div>
+                                            </td>
+                                            <td>$99</td>
+                                            <td>
+                                                <div class="qty">
+                                                    <button class="btn-minus"><i class="fa fa-minus"></i></button>
+                                                    <input type="text" value="1">
+                                                    <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                                </div>
+                                            </td>
+                                            <td>$99</td>
+                                            <td><button><i class="fa fa-trash"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="cart-page-inner">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="coupon">
+                                        <input type="text" placeholder="Coupon Code">
+                                        <button>Apply Code</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="cart-summary">
+                                        <div class="cart-content">
+                                            <h1>Cart Summary</h1>
+                                            <p>Sub Total<span>$99</span></p>
+                                            <p>Shipping Cost<span>$1</span></p>
+                                            <h2>Grand Total<span>$100</span></h2>
+                                        </div>
+                                        <div class="cart-btn">
+                                            <button>Update Cart</button>
+                                            <button>Checkout</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Cart End -->
+        <?php
+        include("footer.php");
+   ?>
+      
+      
