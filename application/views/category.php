@@ -16,7 +16,7 @@
             <div class="mdc-layout-grid__inner">
               <div class="mdc-layout-grid__cell--span-12">
                 <div class="mdc-card">
-                  <h5 class="card-title"><b>Category</b></h5>
+                  <h5 class="card-title"><b>Add Category</b></h5>
                   <div class="template-demo">
                     <!-- <div class="mdc-layout-grid__inner">
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">

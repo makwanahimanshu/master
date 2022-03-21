@@ -28,6 +28,27 @@
     <!-- partial:partials/_sidebar.php -->
 
 
+      <!-- that link in css only in table form -->
+
+    <!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="<?php echo $base.'assets/images/icons/favicon.ico';?>"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo $base.'assets/vendor/bootstrap/css/bootstrap.min.css';?>">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo $base.'assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css';?>">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo $base.'assets/vendor/animate/animate.css';?>">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo $base.'assets/vendor/select2/select2.min.css';?>">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo $base.'assets/vendor/perfect-scrollbar/perfect-scrollbar.css';?>">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo $base.'assets/css/util.css';?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo $base.'assets/css/main.css';?>">
+<!--===============================================================================================-->
+
+      <!-- that link in css only in table form -->
+
   <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open">
       <div class="mdc-drawer__header">
         <a href="<?php echo $base.' ';?>" class="brand-logo">
@@ -48,38 +69,25 @@
               </a>
             </div>
             <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-expansion-panel-link"  data-toggle="expansionPanel"  href="<?php echo $base.'index.php/welcome/viewproduct';?>" data-target="sample-page-submenu">
+              <a class="mdc-drawer-link" href="<?php echo $base.'index.php/Product_CI/viewproduct';?>" >
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">devices</i>
-                Product
-                <i class="mdc-drawer-arrow material-icons">chevron_right</i>
+                Product Master
               </a>
-              <div class="mdc-expansion-panel" id="sample-page-submenu">
-                <nav class="mdc-list mdc-drawer-submenu">
-                  
-                  <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/product';?>">
-                      ADD PRODUCT
-                    </a>
-                  </div>
-                 
-                </nav>
-              </div>
             </div>
-            
             <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/category';?>" >
+              <a class="mdc-drawer-link" href="<?php echo $base.'index.php/Category_CI/viewcategory';?>" >
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">sort</i>
                 Category Master
               </a>
             </div>
             <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/brand';?>" >
+              <a class="mdc-drawer-link" href="<?php echo $base.'index.php/Brand_CI/viewbrand';?>" >
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">dashboard</i>
                 Brand Master
               </a>
             </div>
               <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/basic_tables';?>" >
+              <a class="mdc-drawer-link" href="<?php echo $base.'index.php/Order_CI/order';?>" >
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">list</i>
                 Order Master
               </a>
@@ -169,7 +177,7 @@
                     </a>
                   </div> -->
                   <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="<?php echo $base.'index.php/welcome/login';?>">
+                    <a class="mdc-drawer-link" href="<?php echo $base.'index.php/Login_CI/login';?>">
                       Login
                     </a>
                   </div>

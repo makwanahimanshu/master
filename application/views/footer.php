@@ -32,5 +32,24 @@
   <!-- Custom js for this page-->
   <script src="<?php echo $base.'assets/js/dashboard.js';?>"></script>
   <!-- End custom js for this page-->
+
+
+
+
+
+  	<!-- that css only in table form -->
+
+<!--===============================================================================================-->	
+	<script src="<?php echo $base.'assets/vendor/jquery/jquery-3.2.1.min.js';?>"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo $base.'assets/vendor/bootstrap/js/popper.js';?>"></script>
+	<script src="<?php echo $base.'assets/vendor/bootstrap/js/bootstrap.min.js';?>"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo $base.'assets/vendor/select2/select2.min.js';?>"></script>
+<!--===============================================================================================-->
+	<script src="<?php echo $base.'assets/js/main.js';?>"></script>
+
+  <!-- that css only in table form -->
+
 </body>
 </html> 
