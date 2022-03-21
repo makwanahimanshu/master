@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <?php
     $base = $this->config->item("base_url");
+     //   print_r($base);
+    // exit; 
   ?>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
