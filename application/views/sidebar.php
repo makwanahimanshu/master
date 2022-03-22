@@ -93,7 +93,7 @@
               </a>
             </div>
             <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-drawer-link" href="#" >
+              <a class="mdc-drawer-link" href="<?php echo $base.'index.php/User_CI/viewuser';?>" >
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">person</i>
                 User Master
               </a>

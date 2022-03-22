@@ -21,7 +21,7 @@
           <div class="wrap-table100">
             <div class="table100">
             <div class="col-12 text-right">
-               <a href="<?php echo base_url().'index.php/Product_CI/product';?>" class="mdc-button mdc-button--raised">Add Product</a>
+               <a href="<?php echo base_url().'index.php/User_CI/user';?>" class="mdc-button mdc-button--raised">Add User</a>
            </div>
            <br>
               <table>
@@ -45,18 +45,18 @@
                       <td class="column6">$999.00</td>
                     </tr> -->
     
-                    <?php if(!empty($product)) { foreach($product as $product1) { ?>
+                    <?php if(!empty($user)) { foreach($user as $user1) { ?>
                              <tr>
                       
-                      <td class="column1"><?php echo $product1['id'];?></td>
-                      <td class="column2"><?php echo $product1['quantity'];?></td>
-                      <td class="column3"><?php echo $product1['status'];?></td>
+                      <td class="column1"><?php echo $user1['id'];?></td>
+                      <td class="column2"><?php echo $user1['quantity'];?></td>
+                      <td class="column3"><?php echo $user1['status'];?></td>
 <!--                       
                     <td>
-                      <a href="<?php echo base_url().'index.php/cars/edit/'.$order1['id'] ?>" class="btn btn-primary">Edit</a>
+                      <a href="<?php echo base_url().'index.php/cars/edit/'.$user1['id'] ?>" class="btn btn-primary">Edit</a>
                     </td>
                     <td>
-                      <a href="<?php echo base_url().'index.php/cars/delete/'.$order1['id'] ?>" class="btn btn-danger">Delete</a>
+                      <a href="<?php echo base_url().'index.php/cars/delete/'.$user1['id'] ?>" class="btn btn-danger">Delete</a>
                     </td> -->
                     </tr>   
                     <?php } } else { ?>
