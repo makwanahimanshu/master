@@ -49,10 +49,10 @@
 									<td class="column3"><?php echo $order1['status'];?></td>
 									
 								<td>
-									<a href="<?php echo base_url().'index.php/cars/edit/'.$order1['id'] ?>" class="btn btn-primary">Edit</a>
+									<a href="<?php echo base_url().'index.php/cars/edit/'.$order1['id'] ?>" class="mdc-button mdc-button--raised filled-button--info mdc-ripple-upgraded">Edit</a>
 								</td>
 								<td>
-									<a href="<?php echo base_url().'index.php/cars/delete/'.$order1['id'] ?>" class="btn btn-danger">Delete</a>
+									<a href="<?php echo base_url().'index.php/cars/delete/'.$order1['id'] ?>" class="mdc-button mdc-button--raised filled-button--secondary mdc-ripple-upgraded">Delete</a>
 								</td>
 								</tr>   
 								<?php } } else { ?>

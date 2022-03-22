@@ -3,9 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Product_CI extends CI_Controller {
 
-        public function product(){
-            $this->load->view('add_product');
-        }
+        // public function product(){
+        //     $this->load->view('add_product');
+        // }
 
         public function viewproduct(){
             $this->load->model('Product_model');
@@ -13,5 +13,43 @@ class Product_CI extends CI_Controller {
             $data = array();
             $data['product'] = $product;
             $this->load->view('view_product',$data);
+        }
+
+        public function create(){
+            $this->load->model('Product_model');
+            
+            // $this->form_validation->set_rules('name','Name','required');
+            $this->form_validation->set_rules('image','Image','required');
+            $this->form_validation->set_rules('discription','Discription','required');
+            $this->form_validation->set_rules('stock','Stock','required');
+            $this->form_validation->set_rules('category','Category','required');
+            $this->form_validation->set_rules('ram','Ram','required');
+            $this->form_validation->set_rules('memory','Memory','required');
+            // $this->form_validation->set_rules('price','Price','required');
+          
+           
+        
+            if($this->form_validation->run() == false){
+                
+                    $this->load->view('add_product');
+               
+            } else {
+                //Save record to database
+                $formArray = array();
+                // $formArray['name'] = $this->input->post('name');
+                $formArray['image'] = $this->input->post('image');
+                $formArray['discription'] = $this->input->post('discription');
+                $formArray['RAM'] = $this->input->post('ram');
+                $formArray['memory'] = $this->input->post('memory');
+                $formArray['stock'] = $this->input->post('stock');
+                // $formArray['category'] = $this->input->post('category');
+                $formArray['created_at'] = date('Y-m-d');
+                $formArray['updated_at'] = date('Y-m-d');
+                $this->Product_model->create($formArray);
+                $this->session->set_flashdata('success','Record data successfully!');
+                redirect(base_url().'index.php/Product_CI/viewproduct');
+                
+    
+            }
         }
 }

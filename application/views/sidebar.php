@@ -26,8 +26,7 @@
 <script src="<?php echo $base.'assets/js/preloader.js';?>"></script>
   <div class="body-wrapper">
     <!-- partial:partials/_sidebar.php -->
-
-
+    
       <!-- that link in css only in table form -->
 
     <!--===============================================================================================-->	

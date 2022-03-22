@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Category_CI extends CI_Controller {
 
         public function category(){
-            $this->load->view('category');
+            $this->load->view('add_category');
         }
 
         public function viewcategory(){

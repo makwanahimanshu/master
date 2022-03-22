@@ -15,24 +15,25 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-     
       <div class="limiter">
         <div class="container-table100">
           <div class="wrap-table100">
             <div class="table100">
             <div class="col-12 text-right">
-               <a href="<?php echo base_url().'index.php/Product_CI/product';?>" class="mdc-button mdc-button--raised">Add Product</a>
+               <a href="<?php echo base_url().'index.php/Product_CI/create';?>" class="mdc-button mdc-button--raised">Add Product</a>
            </div>
            <br>
               <table>
                 <thead>
                   <tr class="table100-head">
                     <th class="column1">ID</th>
-                    <th class="column2">Quantity</th>
-                    <th class="column3">Status</th>
-                    <th class="column4">Edit</th>
-                    <th class="column5">Delete</th>
-                    
+                    <th class="column2">Image</th>
+                    <th class="column3">Discription</th>
+                    <th class="column4">RAM</th>
+                    <th class="column5">Memory</th>
+                    <th class="column6">Stock</th>
+                    <th class="column7">Edit</th>
+                    <th class="column8">Delete</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -48,16 +49,19 @@
                     <?php if(!empty($product)) { foreach($product as $product1) { ?>
                              <tr>
                       
-                      <td class="column1"><?php echo $product1['id'];?></td>
-                      <td class="column2"><?php echo $product1['quantity'];?></td>
-                      <td class="column3"><?php echo $product1['status'];?></td>
-<!--                       
+                      <td class="column1"><?php echo $product1['pro_details_id'];?></td>
+                      <td class="column2"><?php echo $product1['image'];?></td>
+                      <td class="column3"><?php echo $product1['discription'];?></td>
+                      <td class="column4"><?php echo $product1['RAM'];?></td>
+                      <td class="column5"><?php echo $product1['memory'];?></td>
+                      <td class="column6"><?php echo $product1['stock'];?></td>
+                      
                     <td>
-                      <a href="<?php echo base_url().'index.php/cars/edit/'.$order1['id'] ?>" class="btn btn-primary">Edit</a>
+                      <a href="<?php echo base_url().'index.php/cars/edit/'.$product1['pro_details_id '] ?>" class="btn btn-primary">Edit</a>
                     </td>
                     <td>
-                      <a href="<?php echo base_url().'index.php/cars/delete/'.$order1['id'] ?>" class="btn btn-danger">Delete</a>
-                    </td> -->
+                      <a href="<?php echo base_url().'index.php/cars/delete/'.$product1['pro_details_id '] ?>" class="btn btn-danger">Delete</a>
+                    </td> 
                     </tr>   
                     <?php } } else { ?>
                     <tr>

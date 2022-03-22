@@ -1,12 +1,13 @@
 <?php
 class Product_model extends CI_model{
-    // function create($formArray)
-    // {
-    //     $this->db->insert('car_models',$formArray); //INSERT INTO users (name,email,created) values(?,?,?);
-    // }
+    function create($formArray)
+    {
+    
+        $this->db->insert('product_details',$formArray); //INSERT INTO users (name,email,created) values(?,?,?);
+    }
 
     public function all(){
-        return $product= $this->db->get('order_tbl1')->result_array(); //SELECT *FORM users;
+        return $product= $this->db->get('product_details')->result_array(); //SELECT *FORM users;
        
     }
     
