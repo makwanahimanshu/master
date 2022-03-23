@@ -6,7 +6,7 @@ class Order_model extends CI_model{
     // }
 
     public function all(){
-        return $order= $this->db->get('order_tbl1')->result_array(); //SELECT *FORM users;
+        return $order= $this->db->get('order_tbl')->result_array(); //SELECT *FORM users;
        
     }
     
