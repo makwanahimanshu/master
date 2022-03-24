@@ -65,7 +65,8 @@
                       </div> -->
                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field mdc-text-field--outlined">
-                          <input type="file" name="image" value="<?php echo set_value('image');?>" class="mdc-text-field__input" id="text-field-hero-input">
+                        <b><?php if(isset($response)) echo $response; ?></b>
+                        <input type="file" name="file" value="<?php echo set_value('image');?>" class="mdc-text-field__input" id="image">
                        <?php echo form_error('image'); ?>
                           <div class="mdc-notched-outline">
                             <div class="mdc-notched-outline__leading"></div>
@@ -76,6 +77,12 @@
                           </div>
                         </div>
                       </div>
+     
+                   
+                <div style="color:red;"><?php echo form_error('file'); ?></div>
+                
+            
+
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field mdc-text-field--outlined">
                           <input type="text" name="discription" value="<?php echo set_value('discription');?>" class="mdc-text-field__input" id="text-field-hero-input">
@@ -201,7 +208,7 @@
                             </div>
                         </div> -->
                         <div class="mb-3">
-                            <button class="mdc-button mdc-button--raised">Create</button>
+                            <button class="mdc-button mdc-button--raised" value="save" name="save">Create</button>
                             <a href="<?php echo base_url().'index.php/Product_CI/viewproduct';?>" class="mdc-button mdc-button--raised filled-button--dark mdc-ripple-upgraded">Cancel</a>
                         </div>
                    </form>

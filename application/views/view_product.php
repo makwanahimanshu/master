@@ -27,13 +27,15 @@
                 <thead>
                   <tr class="table100-head">
                     <th class="column1">ID</th>
+                    <th class="column1">Product Name</th>
                     <th class="column2">Image</th>
                     <th class="column3">Discription</th>
                     <th class="column4">RAM</th>
                     <th class="column5">Memory</th>
                     <th class="column6">Stock</th>
-                    <th class="column7">Edit</th>
-                    <th class="column8">Delete</th>
+                    <th class="column7">Price</th>
+                    <th class="column8">Edit</th>
+                    <th class="column9">Delete</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -50,17 +52,19 @@
                              <tr>
                       
                       <td class="column1"><?php echo $product1['pro_details_id'];?></td>
+                      <td class="column1"><?php echo $product1['pro_name'];?></td>
                       <td class="column2"><?php echo $product1['image'];?></td>
                       <td class="column3"><?php echo $product1['discription'];?></td>
                       <td class="column4"><?php echo $product1['RAM'];?></td>
                       <td class="column5"><?php echo $product1['memory'];?></td>
                       <td class="column6"><?php echo $product1['stock'];?></td>
+                      <td class="column7"><?php echo $product1['price'];?></td>
                       
                     <td>
-                      <a href="<?php echo base_url().'index.php/cars/edit/'.$product1['pro_details_id '] ?>" class="btn btn-primary">Edit</a>
+                      <a href="<?php echo base_url().'index.php/Category_CI/editCategory/'.$product1['pro_details_id'] ?>" class="btn btn-primary">Edit</a>
                     </td>
                     <td>
-                      <a href="<?php echo base_url().'index.php/cars/delete/'.$product1['pro_details_id '] ?>" class="btn btn-danger">Delete</a>
+                      <a href="<?php echo base_url().'index.php/Category_CI/deleteCategory/'.$product1['pro_details_id'] ?>" class="btn btn-danger">Delete</a>
                     </td> 
                     </tr>   
                     <?php } } else { ?>

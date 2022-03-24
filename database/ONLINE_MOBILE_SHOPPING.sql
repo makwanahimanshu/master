@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 21, 2022 at 05:25 AM
+-- Generation Time: Mar 24, 2022 at 06:09 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -30,7 +30,6 @@ SET time_zone = "+00:00";
 CREATE TABLE `brand` (
   `brand_id` int(11) NOT NULL,
   `brand_name` varchar(30) NOT NULL,
-  `cart_id` int(11) NOT NULL,
   `CreatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `UpdatedAt` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -44,8 +43,6 @@ CREATE TABLE `brand` (
 CREATE TABLE `cart` (
   `cart_id` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
-  `pro_details_id` int(11) NOT NULL,
-  `id` int(11) NOT NULL,
   `CreatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `UpdatedAt` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -58,9 +55,24 @@ CREATE TABLE `cart` (
 
 CREATE TABLE `category` (
   `cat_id` int(11) NOT NULL,
-  `cat_name` int(20) NOT NULL,
+  `cat_name` varchar(20) NOT NULL,
   `CreatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `UpdatedAt` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `country`
+--
+
+CREATE TABLE `country` (
+  `con_id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  `CreatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `UpdatedAt` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `isDeleted` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -71,11 +83,9 @@ CREATE TABLE `category` (
 
 CREATE TABLE `feedback` (
   `f_id` int(11) NOT NULL,
-  `title` varchar(500) NOT NULL,
-  `discription` varchar(1000) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `discription` varchar(500) NOT NULL,
   `status` enum('isactive','inactive') NOT NULL,
-  `id` int(11) NOT NULL,
-  `pro_details_id` int(11) NOT NULL,
   `CreatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `UpdatedAt` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -90,11 +100,8 @@ CREATE TABLE `order_tbl` (
   `order_id` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
   `status` varchar(20) NOT NULL,
-  `cart_id` int(11) NOT NULL,
-  `pro_details_id` int(11) NOT NULL,
-  `id` int(11) NOT NULL,
-  `CreatedAt` int(11) NOT NULL,
-  `UpdatedAt` int(11) NOT NULL
+  `CreatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `UpdatedAt` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -105,11 +112,9 @@ CREATE TABLE `order_tbl` (
 
 CREATE TABLE `payment` (
   `p_id` int(11) NOT NULL,
-  `type` enum('CASH','PAYTM','PHONE PAY','ATM','DEBIT CARD') NOT NULL,
-  `id` int(11) NOT NULL,
-  `order_id` int(11) NOT NULL,
-  `CreatedAt` int(11) NOT NULL,
-  `UpdatedAt` int(11) NOT NULL
+  `type` enum('cash','paytm','ATM','DEBIT') NOT NULL,
+  `CreatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `UpdatedAt` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -121,8 +126,6 @@ CREATE TABLE `payment` (
 CREATE TABLE `product` (
   `pro_id` int(11) NOT NULL,
   `pro_name` varchar(100) NOT NULL,
-  `brand_id` int(11) NOT NULL,
-  `id` int(11) NOT NULL,
   `CreatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `UpdatedAt` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -140,9 +143,6 @@ CREATE TABLE `product_details` (
   `RAM` int(11) NOT NULL,
   `memory` int(11) NOT NULL,
   `stock` int(11) NOT NULL,
-  `cart_id` int(11) NOT NULL,
-  `pro_id` int(11) NOT NULL,
-  `id` int(11) NOT NULL,
   `CreatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `UpdatedAt` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -163,11 +163,8 @@ CREATE TABLE `user` (
   `conform_password` varchar(20) NOT NULL,
   `image` varchar(255) NOT NULL,
   `phone_no` int(15) NOT NULL,
-  `country` varchar(20) NOT NULL,
-  `state` varchar(25) NOT NULL,
-  `city` varchar(35) NOT NULL,
-  `street_address` varchar(300) NOT NULL,
-  `pincode` int(12) NOT NULL,
+  `street_address` varchar(150) NOT NULL,
+  `pincode` int(6) NOT NULL,
   `CreatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `UpdatedAt` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -180,16 +177,13 @@ CREATE TABLE `user` (
 -- Indexes for table `brand`
 --
 ALTER TABLE `brand`
-  ADD PRIMARY KEY (`brand_id`),
-  ADD KEY `cart_id` (`cart_id`);
+  ADD PRIMARY KEY (`brand_id`);
 
 --
 -- Indexes for table `cart`
 --
 ALTER TABLE `cart`
-  ADD PRIMARY KEY (`cart_id`),
-  ADD KEY `pro_details_id` (`pro_details_id`),
-  ADD KEY `id` (`id`);
+  ADD PRIMARY KEY (`cart_id`);
 
 --
 -- Indexes for table `category`
@@ -198,52 +192,40 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`cat_id`);
 
 --
+-- Indexes for table `country`
+--
+ALTER TABLE `country`
+  ADD PRIMARY KEY (`con_id`);
+
+--
 -- Indexes for table `feedback`
 --
 ALTER TABLE `feedback`
-  ADD PRIMARY KEY (`f_id`),
-  ADD KEY `id` (`id`),
-  ADD KEY `pro_details_id` (`pro_details_id`);
+  ADD PRIMARY KEY (`f_id`);
 
 --
 -- Indexes for table `order_tbl`
 --
 ALTER TABLE `order_tbl`
-  ADD PRIMARY KEY (`order_id`),
-  ADD KEY `pro_details_id` (`pro_details_id`),
-  ADD KEY `cart_id` (`cart_id`),
-  ADD KEY `id` (`id`);
+  ADD PRIMARY KEY (`order_id`);
 
 --
 -- Indexes for table `payment`
 --
 ALTER TABLE `payment`
-  ADD PRIMARY KEY (`p_id`),
-  ADD KEY `order_id` (`order_id`),
-  ADD KEY `id` (`id`);
+  ADD PRIMARY KEY (`p_id`);
 
 --
 -- Indexes for table `product`
 --
 ALTER TABLE `product`
-  ADD PRIMARY KEY (`pro_id`),
-  ADD KEY `brand_id` (`brand_id`),
-  ADD KEY `id` (`id`);
+  ADD PRIMARY KEY (`pro_id`);
 
 --
 -- Indexes for table `product_details`
 --
 ALTER TABLE `product_details`
-  ADD PRIMARY KEY (`pro_details_id`),
-  ADD KEY `cart_id` (`cart_id`),
-  ADD KEY `pro_id` (`pro_id`),
-  ADD KEY `id` (`id`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`pro_details_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -259,13 +241,19 @@ ALTER TABLE `brand`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
   MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `country`
+--
+ALTER TABLE `country`
+  MODIFY `con_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `feedback`
@@ -296,82 +284,6 @@ ALTER TABLE `product`
 --
 ALTER TABLE `product_details`
   MODIFY `pro_details_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `brand`
---
-ALTER TABLE `brand`
-  ADD CONSTRAINT `brand_ibfk_1` FOREIGN KEY (`cart_id`) REFERENCES `category` (`cat_id`),
-  ADD CONSTRAINT `brand_ibfk_2` FOREIGN KEY (`cart_id`) REFERENCES `cart` (`cart_id`);
-
---
--- Constraints for table `cart`
---
-ALTER TABLE `cart`
-  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`pro_details_id`) REFERENCES `product_details` (`pro_details_id`),
-  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`pro_details_id`) REFERENCES `product_details` (`pro_details_id`),
-  ADD CONSTRAINT `cart_ibfk_3` FOREIGN KEY (`pro_details_id`) REFERENCES `product_details` (`pro_details_id`),
-  ADD CONSTRAINT `cart_ibfk_4` FOREIGN KEY (`pro_details_id`) REFERENCES `product_details` (`pro_details_id`),
-  ADD CONSTRAINT `cart_ibfk_5` FOREIGN KEY (`pro_details_id`) REFERENCES `product_details` (`pro_details_id`),
-  ADD CONSTRAINT `cart_ibfk_6` FOREIGN KEY (`pro_details_id`) REFERENCES `product_details` (`pro_details_id`),
-  ADD CONSTRAINT `cart_ibfk_7` FOREIGN KEY (`pro_details_id`) REFERENCES `product_details` (`pro_details_id`),
-  ADD CONSTRAINT `cart_ibfk_8` FOREIGN KEY (`pro_details_id`) REFERENCES `product_details` (`pro_details_id`),
-  ADD CONSTRAINT `cart_ibfk_9` FOREIGN KEY (`id`) REFERENCES `user` (`id`);
-
---
--- Constraints for table `feedback`
---
-ALTER TABLE `feedback`
-  ADD CONSTRAINT `feedback_ibfk_1` FOREIGN KEY (`id`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `feedback_ibfk_2` FOREIGN KEY (`id`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `feedback_ibfk_3` FOREIGN KEY (`pro_details_id`) REFERENCES `product_details` (`pro_details_id`);
-
---
--- Constraints for table `order_tbl`
---
-ALTER TABLE `order_tbl`
-  ADD CONSTRAINT `order_tbl_ibfk_1` FOREIGN KEY (`id`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `order_tbl_ibfk_2` FOREIGN KEY (`pro_details_id`) REFERENCES `product` (`pro_id`),
-  ADD CONSTRAINT `order_tbl_ibfk_3` FOREIGN KEY (`pro_details_id`) REFERENCES `product` (`pro_id`),
-  ADD CONSTRAINT `order_tbl_ibfk_4` FOREIGN KEY (`id`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `order_tbl_ibfk_5` FOREIGN KEY (`pro_details_id`) REFERENCES `product_details` (`pro_details_id`),
-  ADD CONSTRAINT `order_tbl_ibfk_6` FOREIGN KEY (`cart_id`) REFERENCES `cart` (`cart_id`),
-  ADD CONSTRAINT `order_tbl_ibfk_7` FOREIGN KEY (`id`) REFERENCES `user` (`id`);
-
---
--- Constraints for table `payment`
---
-ALTER TABLE `payment`
-  ADD CONSTRAINT `payment_ibfk_1` FOREIGN KEY (`id`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `payment_ibfk_2` FOREIGN KEY (`order_id`) REFERENCES `order_tbl` (`order_id`),
-  ADD CONSTRAINT `payment_ibfk_3` FOREIGN KEY (`id`) REFERENCES `user` (`id`);
-
---
--- Constraints for table `product`
---
-ALTER TABLE `product`
-  ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`brand_id`) REFERENCES `brand` (`brand_id`),
-  ADD CONSTRAINT `product_ibfk_2` FOREIGN KEY (`id`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `product_ibfk_3` FOREIGN KEY (`brand_id`) REFERENCES `brand` (`brand_id`),
-  ADD CONSTRAINT `product_ibfk_4` FOREIGN KEY (`id`) REFERENCES `user` (`id`);
-
---
--- Constraints for table `product_details`
---
-ALTER TABLE `product_details`
-  ADD CONSTRAINT `product_details_ibfk_1` FOREIGN KEY (`cart_id`) REFERENCES `cart` (`cart_id`),
-  ADD CONSTRAINT `product_details_ibfk_2` FOREIGN KEY (`pro_id`) REFERENCES `product` (`pro_id`),
-  ADD CONSTRAINT `product_details_ibfk_3` FOREIGN KEY (`id`) REFERENCES `user` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

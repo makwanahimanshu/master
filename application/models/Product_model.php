@@ -7,7 +7,12 @@ class Product_model extends CI_model{
     }
 
     public function all(){
-        return $product= $this->db->get('product_details')->result_array(); //SELECT *FORM users;
+        $this->db->select('pro_details_id,pro_name,image,discription,RAM,memory,stock,price');
+        $this->db->from('product_details');
+        $this->db->join('product', 'product_details.pro_id = product.pro_id');
+        return $product  = $this->db->get()->result_array();
+
+        // return $product= $this->db->get('product_details')->result_array(); //SELECT *FORM users;
        
     }
     

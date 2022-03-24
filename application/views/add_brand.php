@@ -23,12 +23,25 @@
                   <form method="post" name="createBrand" action="<?php echo base_url().'index.php/Brand_CI/create'; ?>">
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field mdc-text-field--outlined">
-                          <input type="text" name="brandd_name" class="mdc-text-field__input" id="text-field-hero-input">
+                          <input type="text" name="brand_name" class="mdc-text-field__input" id="text-field-hero-input">
                           
                           <div class="mdc-notched-outline">
                             <div class="mdc-notched-outline__leading"></div>
                             <div class="mdc-notched-outline__notch">
                               <label for="text-field-hero-input" class="mdc-floating-label">Brand Name</label>
+                            </div>
+                            <div class="mdc-notched-outline__trailing"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                          <input type="text" class="mdc-text-field__input" id="text-field-hero-input">
+                          <div class="mdc-notched-outline">
+                            <div class="mdc-notched-outline__leading"></div>
+                            <div class="mdc-notched-outline__notch">
+                              <label for="text-field-hero-input" class="mdc-floating-label">Category Name</label>
                             </div>
                             <div class="mdc-notched-outline__trailing"></div>
                           </div>

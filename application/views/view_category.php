@@ -21,7 +21,7 @@
          <div class="wrap-table100">
            <div class="table100">
            <div class="col-12 text-right">
-              <a href="<?php echo base_url().'index.php/Category_CI/category';?>" class="mdc-button mdc-button--raised">Add Cateegory</a>
+              <a href="<?php echo base_url().'index.php/Category_CI/create';?>" class="mdc-button mdc-button--raised">Add Cateegory</a>
           </div>
           <br>
              <table>
@@ -29,6 +29,8 @@
                  <tr class="table100-head">
                    <th class="column1">ID</th>
                    <th class="column2">Category Name</th>
+                   <th class="column3">Edit</th>
+                   <th class="column4">Delete</th>
                   
                    <!-- <th class="column4">Edit</th>
                    <th class="column5">Delete</th>
@@ -50,14 +52,15 @@
                      
                             <td class="column1"><?php echo $category1['cat_id'];?></td>
                             <td class="column2"><?php echo $category1['cat_name'];?></td>
+                           
                             
-                    <!--                       
+                                           
                    <td>
-                     <a href="<?php echo base_url().'index.php/cars/edit/'.$category1['id'] ?>" class="btn btn-primary">Edit</a>
+                     <a href="<?php echo base_url().'index.php/Category_CI/editCategory/'.$category1['cat_id'] ?>" class="btn btn-primary">Edit</a>
+                   </td> 
+                   <td>
+                     <a href="<?php echo base_url().'index.php/Category_CI/deleteCategory/'.$category1['cat_id'] ?>" class="btn btn-danger">Delete</a>
                    </td>
-                   <td>
-                     <a href="<?php echo base_url().'index.php/cars/delete/'.$category1['id'] ?>" class="btn btn-danger">Delete</a>
-                   </td> -->
                    </tr>   
                    <?php } } else { ?>
                    <tr>
@@ -78,3 +81,21 @@
         <?php include("footer.php"); ?> 
         <!-- partial -->
 </html>
+
+
+
+
+<form method="post" name="editCategory" action="<?php echo base_url().'index.php/Category_CI/editCategory'; ?>">
+                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                          <input type="text" class="mdc-text-field__input" id="text-field-hero-input" name="cat_name"  value="<?php echo set_value('cat_name',$cars['cat_name']);?>">
+                          <?php echo form_error('cat_name'); ?>  
+                          <div class="mdc-notched-outline">
+                              <div class="mdc-notched-outline__leading"></div>
+                                <div class="mdc-notched-outline__notch">
+                                  <label for="text-field-hero-input" class="mdc-floating-label">Category Name</label>
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                        </div>
+                      </div>

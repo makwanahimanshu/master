@@ -44,16 +44,16 @@
 								<?php if(!empty($order)) { foreach($order as $order1) { ?>
                					<tr>
 									
-									<td class="column1"><?php echo $order1['id'];?></td>
+									<td class="column1"><?php echo $order1['order_id'];?></td>
 									<td class="column2"><?php echo $order1['quantity'];?></td>
 									<td class="column3"><?php echo $order1['status'];?></td>
 									
-								<td>
-									<a href="<?php echo base_url().'index.php/cars/edit/'.$order1['id'] ?>" class="mdc-button mdc-button--raised filled-button--info mdc-ripple-upgraded">Edit</a>
+								<!-- <td>
+									<a href="<?php echo base_url().'index.php/cars/edit/'.$order1['order_id'] ?>" class="mdc-button mdc-button--raised filled-button--info mdc-ripple-upgraded">Edit</a>
 								</td>
 								<td>
-									<a href="<?php echo base_url().'index.php/cars/delete/'.$order1['id'] ?>" class="mdc-button mdc-button--raised filled-button--secondary mdc-ripple-upgraded">Delete</a>
-								</td>
+									<a href="<?php echo base_url().'index.php/cars/delete/'.$order1['order_id'] ?>" class="mdc-button mdc-button--raised filled-button--secondary mdc-ripple-upgraded">Delete</a>
+								</td> -->
 								</tr>   
 								<?php } } else { ?>
 								<tr>

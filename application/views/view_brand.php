@@ -29,6 +29,7 @@
                  <tr class="table100-head">
                    <th class="column1">ID</th>
                    <th class="column2">Name</th>
+                   <th class="column3">Category</th>
                    <th class="column3">Edit</th>
                    <th class="column4">Delete</th>
               
@@ -39,14 +40,15 @@
                    <?php if(!empty($brand)) { foreach($brand as $brand1) { ?>
                             <tr>
                      
-                            <td class="column1"><?php echo $brand1['brandd_id'];?></td>
-                            <td class="column2"><?php echo $brand1['brandd_name'];?></td>
+                            <td class="column1"><?php echo $brand1['brand_id'];?></td>
+                            <td class="column2"><?php echo $brand1['brand_name'];?></td>
+                            <td class="column2"><?php echo $brand1['cat_name'];?></td>
                     
                     <!-- <td>
-                      <a href="<?php echo base_url().'index.php/Brand_CI/'.$brand1['brandd_id '] ?>" class="btn btn-primary">Edit</a>
+                      <a href="<?php echo base_url().'index.php/Brand_CI/edit/'.$brand1['brand_id '] ?>" class="btn btn-primary">Edit</a>
                     </td>
                     <td>
-                      <a href="<?php echo base_url().'index.php/Brand_CI/'.$brand1['brandd_id '] ?>" class="btn btn-danger">Delete</a>
+                      <a href="<?php echo base_url().'index.php/Brand_CI/delete'.$brand1['brand_id '] ?>" class="btn btn-danger">Delete</a>
                     </td> -->
 
                    </tr>   

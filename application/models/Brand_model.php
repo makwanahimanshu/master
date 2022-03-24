@@ -5,12 +5,19 @@ class Brand_model extends CI_model{
         // echo "hyyy<pre>";
         // print_r($formArray);
         // exit;
-        $this->db->insert('brand1',$formArray); //INSERT INTO users (name,email,created) values(?,?,?);
+        $this->db->insert('brand',$formArray); //INSERT INTO users (name,email,created) values(?,?,?);
     }
 
     public function all(){
-       
-        return $brand= $this->db->get('brand1')->result_array(); //SELECT *FORM users;
+    // SELECT brand_name,cat_name,brand_id FROM `brand` INNER JOIN `category` ON brand.cat_id = category.cat_id;
+     //this JION method to two tables
+        $this->db->select('brand_id,brand_name,cat_name');
+        $this->db->from('brand');
+        $this->db->join('category', 'brand.cat_id = category.cat_id');
+         return $brand  = $this->db->get()->result_array();
+
+         
+        //return $brand= $this->db->get('brand')->result_array(); //SELECT *FORM users;
        
     }
     

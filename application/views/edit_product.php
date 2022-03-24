@@ -16,7 +16,7 @@
             <div class="mdc-layout-grid__inner">
               <div class="mdc-layout-grid__cell--span-12">
                 <div class="mdc-card">
-                  <h5 class="card-title"><b>Add Category</b></h5>
+                  <h5 class="card-title"><b>Edit Category</b></h5>
                   <div class="template-demo">
                     <!-- <div class="mdc-layout-grid__inner">
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
@@ -26,19 +26,23 @@
                           <label for="text-field-hero-input" class="mdc-floating-label">Name</label>
                         </div>
                       </div> -->
-                    <form method="post" name="createCategory" action="<?php echo base_url().'index.php/Category_CI/create'; ?>">
+                    <form method="post" name="editCategory" action="<?php echo base_url().'index.php/Category_CI/editCategory/'.$category['cat_id']; ?>">
+            
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field mdc-text-field--outlined">
-                          <input type="text" class="mdc-text-field__input" id="text-field-hero-input" name="cat_name">
-                            <div class="mdc-notched-outline">
+                          <input type="text" class="mdc-text-field__input" id="text-field-hero-input" name="cat_name"  value="<?php echo set_value('cat_name',$category['cat_name']);?>">
+                          <?php echo form_error('cat_name'); ?>  
+                          <div class="mdc-notched-outline">
                               <div class="mdc-notched-outline__leading"></div>
                                 <div class="mdc-notched-outline__notch">
                                   <label for="text-field-hero-input" class="mdc-floating-label">Category Name</label>
                                 </div>
                                 <div class="mdc-notched-outline__trailing"></div>
                             </div>
+
                         </div>
                       </div>
+                   
                       <!-- <div class="mdc-layout-grid">
                             <div class="d-grid gap-2 col-6 mx-auto">
                                <button class="mdc-button mdc-button--raised">
@@ -48,7 +52,7 @@
                         </div> -->
 
                         <div class="mb-3">
-                            <button class="mdc-button mdc-button--raised" name="save"/> Add Category</button>
+                            <button class="mdc-button mdc-button--raised" name="save"> Add Category</button>
                             <a href="<?php echo base_url().'index.php/Category_CI/viewcategory';?>" class="mdc-button mdc-button--raised filled-button--dark mdc-ripple-upgraded">Cancel</a>
                         </div>
                    </form>
@@ -89,9 +93,9 @@
                 </div>
               </div>
             </div>
-          </div>
+        
           </main>
-
+          </div>
              <!-- partial:../../partials/_footer.php -->
              
              <?php include("footer.php"); ?> 
