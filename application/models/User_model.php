@@ -26,5 +26,7 @@ class User_model extends CI_model{
     //     $this->db->delete('car_models'); // DELETE FROM users Where user_id = ?
     // }
 
+
+
 }
 ?>

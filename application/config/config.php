@@ -23,7 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/admin/';
+//$config['base_url'] = 'http://localhost/admin/';
+$config['base_url'] = 'http://localhost:8080/admin/master/';
 
 /*
 |--------------------------------------------------------------------------
@@ -326,7 +327,8 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/userguide3/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+//$config['encryption_key'] = '';
+$config['encryption_key'] = 'xRUqKhsoZ5qV6y3kqARFJFdPqJvp7X2z';
 
 /*
 |--------------------------------------------------------------------------

@@ -1,3 +1,4 @@
+<?php include("session_set.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -199,7 +200,7 @@
         <div class="profile-actions">
           <a href="javascript:;">Settings</a>
           <span class="divider"></span>
-          <a href="javascript:;">Logout</a>
+          <a href="<?php echo $base.'index.php/Login_CI/logout';?>">Logout</a>
         </div>
         <!-- <div class="mdc-card premium-card">
           <div class="d-flex align-items-center">

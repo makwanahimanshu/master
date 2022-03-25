@@ -1,3 +1,16 @@
+<?php  
+    $base=$this->config->item('base_url');
+    // echo "yes";
+    // print_r($base);
+    // exit; 
+    $email=$this->session->userdata('email');
+      if($email){
+
+      }else{
+        redirect(base_url() .'index.php/Login_CI/login');
+      }
+?>
+
 <!-- partial:../../partials/_sidebar.php -->
         <!-- $base.'index.php/Welcome/sidebar' -->
         <?php include ("sidebar.php"); ?>

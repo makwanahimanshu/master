@@ -1,8 +1,17 @@
+<?php
+  $base=$this->config->item('base_url');
+  // print_r($base);
+  // exit;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <?php $base=$this->config->item("base_url"); ?>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Material Dash</title>
@@ -29,22 +38,24 @@
               <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-6-tablet">           
             <div class="mdc-card">
               <div class="card-title"><h3>Welcome</h3></div> 
-              <form>
+                <form method="POST" action="<?php echo base_url(); ?>index.php/Login_CI/login_validation">
                     <div class="mdc-layout-grid">
                       <div class="mdc-layout-grid__inner">
                         <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
                           <div class="mdc-text-field w-100">
-                            <input class="mdc-text-field__input" id="text-field-hero-input">
+                            <input class="mdc-text-field__input" id="text-field-hero-input" name="email">
                             <div class="mdc-line-ripple"></div>
-                            <label for="text-field-hero-input" class="mdc-floating-label">Email</label>
+                            <label for="text-field-hero-input" class="mdc-floating-label" >Email</label>
                           </div>
+                          <span class="text-danger"><?php  echo form_error('email');?></span>
                         </div>
                         <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
                           <div class="mdc-text-field w-100">
-                            <input class="mdc-text-field__input" type="password" id="text-field-hero-input">
+                            <input class="mdc-text-field__input" type="password"  name="password" id="text-field-hero-input" >
                             <div class="mdc-line-ripple"></div>
-                            <label for="text-field-hero-input" class="mdc-floating-label">Password</label>
+                            <label for="text-field-hero-input" class="mdc-floating-label" >Password</label>
                           </div>
+                          <span class="text-danger"><?php  echo form_error('password');?></span>
                         </div>
                         <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                           <div class="mdc-form-field">
@@ -69,9 +80,14 @@
                           <a href="#">Forgot Password</a>
                         </div>
                         <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
-                          <a href="<?php echo $base.' '; ?>" class="mdc-button mdc-button--raised w-100">
-                            Login
-                          </a>
+                            <input class="mdc-button mdc-button--raised w-100"
+                             type="submit" name="insert" value="login">
+
+                             <lable class="text-danger">   
+                        <?php  
+                        echo $this->session->flashdata("error");  
+                        ?>  </lable>
+                     
                         </div>
                       </div>
                     </div>

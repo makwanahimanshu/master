@@ -8,7 +8,12 @@ class Brand_CI extends CI_Controller {
         // }
 
         public function viewbrand(){
+         
+          
             $this->load->model('Brand_model');
+          
+
+            
             // echo "tables dtaa";
             // print_r($_POST);
             // exit;

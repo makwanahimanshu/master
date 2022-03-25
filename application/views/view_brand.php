@@ -1,3 +1,4 @@
+
 <!-- partial:../../partials/_sidebar.php -->
         <!-- $base.'index.php/Welcome/sidebar' -->
 		<?php include_once "sidebar.php"; ?>
@@ -8,14 +9,15 @@
 		   <!-- partial:../../partials/_navbar.php -->
 		   
 		 <?php include_once "navbar.php"; ?>
-	 
-	<?php
-    $base = $this->config->item("base_url");
-  ?>
+	
+
+
+ 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-     
+  <b>  </b>
+
      <div class="limiter">
        <div class="container-table100">
          <div class="wrap-table100">
