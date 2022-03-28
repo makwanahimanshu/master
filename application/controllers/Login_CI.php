@@ -23,41 +23,40 @@ class Login_CI extends CI_Controller {
             $this->form_validation->set_rules('email','Email','required');
             $this->form_validation->set_rules('password','Password','required');
 
-            if($this->form_validation->run()){
+            if($this->form_validation->run())
+            {
                 //true
                 $email=$this->input->post('email');
                 $password=$this->input->post('password');
+            
                 // echo "hi";
                 // print_r($_POST);
                 // exit;
                 $this->load->model('LoginModel');
-                if($this->LoginModel->can_login($email,$password)){
-                    $session_data =array(
-                        'email' => $email
-                    );
 
-                    $cookie= $this->input->set_cookie("email",$email,"60");
-                    if($cookie)
+               
+                 
+               
+
+                    if($this->LoginModel->can_login($email,$password))
                     {
+                        $session_data =array(
+                            'email' => $email
+                        );
+
                     
-                      // echo "yes";
-                      //    exit;
+                       
+                        $this->session->sess_expiration = '3600';
+                        $this->session->set_userdata($session_data);
+                        redirect(base_url() . 'index.php/Login_CI/enter');
                     }
                     else{
-                      // echo "yes";
-                      //    exit;
+                            $this->session->set_flashdata('error','Invalid Email');
+                            redirect(base_url() .'index.php/Login_CI/login');
                     }
 
-
-
-
-                    $this->session->set_userdata($session_data);
-                    redirect(base_url() . 'index.php/Login_CI/enter');
-                }
-                else{
-                        $this->session->set_flashdata('error','Invalid Email');
-                        redirect(base_url() .'index.php/Login_CI/login');
-                }
+                
+                
             }
             else{
                 //false
@@ -82,6 +81,7 @@ class Login_CI extends CI_Controller {
         }
          function logout()
         {
+            delete_cookie($eamil);
             $this->session->unset_userdata('email');
             redirect(base_url() .'index.php/Login_CI/login');
         }

@@ -57,9 +57,14 @@
                           </div>
                           <span class="text-danger"><?php  echo form_error('password');?></span>
                         </div>
+                                                  
+         <tr>
+        	<td>Remember Me</td>
+            <td><input type="checkbox" name="rm"></td>
+        </tr>
                         <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                           <div class="mdc-form-field">
-                            <div class="mdc-checkbox">
+                            <!-- <div class="mdc-checkbox">
                               <input type="checkbox"
                                       class="mdc-checkbox__native-control"
                                       id="checkbox-1"/>
@@ -70,10 +75,12 @@
                                         fill="none"
                                         d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
                                 </svg>
-                                <div class="mdc-checkbox__mixedmark"></div>
-                              </div>
+                                <!-- <div class="mdc-checkbox__mixedmark" name="rm"></div> -->
+       
+        
+                              </div> -->
                             </div>
-                            <label for="checkbox-1">Remember me</label>
+                           
                           </div>
                         </div>
                         <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop d-flex align-items-center justify-content-end">
