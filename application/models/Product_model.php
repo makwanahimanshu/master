@@ -1,9 +1,24 @@
 <?php
 class Product_model extends CI_model{
-    function create($formArray)
+   
+   public function pro_create()
     {
-    
-        $this->db->insert('product_details',$formArray); //INSERT INTO users (name,email,created) values(?,?,?);
+        $formArray=array();
+        $formArray=array(
+            "image" => $this->input->post('image'),
+            "discription" => $this->input->post('discription'),
+            "RAM" => $this->input->post('RAM'),
+            "memory" => $this->input->post('memory'),
+            "stock" => $this->input->post('stock'),
+            "price" => $this->input->post('price'),
+            
+            
+        );
+        echo "form aRAAY <pre>";
+            print_r($formArray);
+            exit;
+              
+       $this->db->insert('product_details',$formArray); //INSERT INTO users (name,email,created) values(?,?,?);
     }
 
     public function all(){
