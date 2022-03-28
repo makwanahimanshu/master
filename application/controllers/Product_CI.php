@@ -2,6 +2,15 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Product_CI extends CI_Controller {
+    public function __construct()
+	{
+		parent::__construct();
+		$this->load->database();
+		
+		$this->load->library('form_validation');
+		
+ 
+	}
 
         // public function product(){
         //     $this->load->view('add_product');
@@ -18,6 +27,7 @@ class Product_CI extends CI_Controller {
 
 
         public function create(){
+<<<<<<< HEAD
             // echo "hy<pre>";
             // print_r($_POST);
             // exit;
@@ -45,6 +55,48 @@ class Product_CI extends CI_Controller {
               redirect(base_url().'index.php/Product_CI/viewproduct'); 
               }  
       
+=======
+                $this->load->model('Product_model');
+                
+                // // $this->form_validation->set_rules('name','Name','required');
+              //  $this->form_validation->set_rules('image','Image','required');
+                $this->form_validation->set_rules('discription','Discription','required');
+                $this->form_validation->set_rules('stock','Stock','required');
+                $this->form_validation->set_rules('category','Category','required');
+               // $this->form_validation->set_rules('ram','Ram','required');
+                //$this->form_validation->set_rules('memory','Memory','required');
+                $this->form_validation->set_rules('price','Price','required');
+                // $this->form_validation->set_rules('price','Price','required');
+            
+            
+            
+            if($this->form_validation->run() === TRUE)
+	        {
+                if(isset($_POST)){ 
+                    // 	  print_r($_POST);
+                    // exit;
+                        $this->Product_model->pro_create($_POST);
+                        $this->session->set_flashdata('sucess','yes');
+                        redirect(base_url().'index.php/welcome/index');
+                        alert("data  inserted");
+                    }
+                    else{
+                    
+        
+                        echo "no yes<pre>";
+                  
+                    
+                    
+                    }
+		    }
+            else{
+                // echo "no";
+                $this->load->view('add_product.php');
+            }
+		
+	
+	
+>>>>>>> 864cccc641a26a195e3248fb0ba4db28cefd3dcb
         }
 
 
@@ -96,3 +148,4 @@ class Product_CI extends CI_Controller {
 
 
 }
+?>
