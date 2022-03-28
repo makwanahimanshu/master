@@ -35,18 +35,56 @@
                         </div>
                       </div>
 
-                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field mdc-text-field--outlined">
-                          <input type="text" class="mdc-text-field__input" id="text-field-hero-input">
-                          <div class="mdc-notched-outline">
-                            <div class="mdc-notched-outline__leading"></div>
-                            <div class="mdc-notched-outline__notch">
-                              <label for="text-field-hero-input" class="mdc-floating-label">Category Name</label>
+                      
+                      <div class="mdc-select demo-width-class" data-mdc-auto-init="MDCSelect">
+                      <!-- <input type="hidden" name="enhanced-select"> -->
+                      <select class="form-control" id="city_id" name="city_id" >
+                        <i class="mdc-select__dropdown-icon"></i>
+                        <div class="mdc-select__selected-text"></div> 
+                            <div class="mdc-select__menu mdc-menu-surface demo-width-class">
+                                <?php if(!empty($city)) { 
+                                foreach($city as $city1){ ?>
+                                    
+                                    <option value="<?php echo $city1['con_id'];?>"><?php echo $city1['name'];?></option>
+                                    <?php } } else {
+                                  echo "data not found"  ;
+                                } ?>
+                              
                             </div>
-                            <div class="mdc-notched-outline__trailing"></div>
+                              <?php echo form_error('memory'); ?>
+                                <span class="mdc-floating-label">Product Memory</span>
+                               
+                            <div class="mdc-line-ripple"></div>
+                            </select>
                           </div>
-                        </div>
-                      </div>
+                 
+
+
+
+
+
+                          <!-- <div style="color:red;"><?php echo form_error('2'); ?></div>
+                     <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-group">
+                        <label class="form-label" >City</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                        <select class="form-control" id="city_id" name="city_id" >
+                        
+                      
+                        <?php if(!empty($city)) { 
+                            foreach($city as $city1){ ?>
+                                
+                                <option value="<?php echo $city1['con_id'];?>"><?php echo $city1['name'];?></option>
+                                <?php } } else {
+                              echo "data not found"  ;
+                            } ?>
+                        
+
+                        </select>
+                    </div>
+                </div>  -->
+
+
   
                   
                       <div class="mb-3">

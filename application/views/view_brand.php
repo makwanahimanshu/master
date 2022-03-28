@@ -46,12 +46,12 @@
                             <td class="column2"><?php echo $brand1['brand_name'];?></td>
                             <td class="column2"><?php echo $brand1['cat_name'];?></td>
                     
-                    <!-- <td>
-                      <a href="<?php echo base_url().'index.php/Brand_CI/edit/'.$brand1['brand_id '] ?>" class="btn btn-primary">Edit</a>
+                    <td>
+                      <a href="<?php echo base_url().'index.php/Brand_CI/editBrand/'.$brand1['brand_id'] ?>" class="btn btn-primary">Edit</a>
                     </td>
                     <td>
-                      <a href="<?php echo base_url().'index.php/Brand_CI/delete'.$brand1['brand_id '] ?>" class="btn btn-danger">Delete</a>
-                    </td> -->
+                      <a href="<?php echo base_url().'index.php/Brand_CI/deleteBrand/'.$brand1['brand_id'] ?>" class="btn btn-danger">Delete</a>
+                    </td>
 
                    </tr>   
                    <?php } } else { ?>

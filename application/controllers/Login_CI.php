@@ -28,6 +28,7 @@ class Login_CI extends CI_Controller {
                 //true
                 $email=$this->input->post('email');
                 $password=$this->input->post('password');
+                
             
                 // echo "hi";
                 // print_r($_POST);
