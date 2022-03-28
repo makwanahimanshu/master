@@ -81,21 +81,3 @@
         <?php include("footer.php"); ?> 
         <!-- partial -->
 </html>
-
-
-
-
-<form method="post" name="editCategory" action="<?php echo base_url().'index.php/Category_CI/editCategory'; ?>">
-                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field mdc-text-field--outlined">
-                          <input type="text" class="mdc-text-field__input" id="text-field-hero-input" name="cat_name"  value="<?php echo set_value('cat_name',$cars['cat_name']);?>">
-                          <?php echo form_error('cat_name'); ?>  
-                          <div class="mdc-notched-outline">
-                              <div class="mdc-notched-outline__leading"></div>
-                                <div class="mdc-notched-outline__notch">
-                                  <label for="text-field-hero-input" class="mdc-floating-label">Category Name</label>
-                                </div>
-                                <div class="mdc-notched-outline__trailing"></div>
-                            </div>
-                        </div>
-                      </div>

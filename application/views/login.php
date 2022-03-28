@@ -57,11 +57,11 @@
                           </div>
                           <span class="text-danger"><?php  echo form_error('password');?></span>
                         </div>
-                                                  
+<!--                                                   
          <tr>
         	<td>Remember Me</td>
             <td><input type="checkbox" name="rm"></td>
-        </tr>
+        </tr> -->
                         <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                           <div class="mdc-form-field">
                             <!-- <div class="mdc-checkbox">
@@ -78,7 +78,7 @@
                                 <!-- <div class="mdc-checkbox__mixedmark" name="rm"></div> -->
        
         
-                              </div> -->
+                              </div> 
                             </div>
                            
                           </div>
