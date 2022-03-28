@@ -36,31 +36,29 @@
                       </div>
 
                       
-                      <div class="mdc-select demo-width-class" data-mdc-auto-init="MDCSelect">
-                      <!-- <input type="hidden" name="enhanced-select"> -->
-                      <select class="form-control" id="city_id" name="city_id" >
+                      
+                  
+                      <select class="form-control" id="cat_name" name="cat_name" >
                         <i class="mdc-select__dropdown-icon"></i>
                         <div class="mdc-select__selected-text"></div> 
                             <div class="mdc-select__menu mdc-menu-surface demo-width-class">
-                                <?php if(!empty($city)) { 
-                                foreach($city as $city1){ ?>
+                                <?php if(!empty($category)) { 
+                                foreach($category as $category1){ ?>
                                     
-                                    <option value="<?php echo $city1['con_id'];?>"><?php echo $city1['name'];?></option>
+                                    <option value="<?php echo $category1['cat_id'];?>"><?php echo $category1['cat_name'];?></option>
                                     <?php } } else {
                                   echo "data not found"  ;
                                 } ?>
                               
                             </div>
-                              <?php echo form_error('memory'); ?>
+                              <?php echo form_error('cat_name'); ?>
                                 <span class="mdc-floating-label">Product Memory</span>
                                
                             <div class="mdc-line-ripple"></div>
                             </select>
-                          </div>
+                          
                  
-
-
-
+                            
 
 
                           <!-- <div style="color:red;"><?php echo form_error('2'); ?></div>

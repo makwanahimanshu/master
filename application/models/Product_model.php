@@ -6,7 +6,24 @@ class Product_model extends CI_model{
         $this->db->insert('product_details',$formArray); //INSERT INTO users (name,email,created) values(?,?,?);
     }
 
+
+    // function create()
+    // {
+    //             $formArray = array();
+    //             $formArray=array(
+    //                 // "image" => $this->input->post('image'),
+    //                 "discription" => $this->input->post('discription'),
+    //                 // "RAM" => $this->input->post('RAM'),
+    //                 // "memory" => $this->input->post('memory'),
+    //                 "stock" => $this->input->post('stock'),
+    //                 "price" => $this->input->post('price')  
+    //             );
+
+    //           $this->db->insert('product_details',$formArray); //INSERT INTO users (name,email,created) values(?,?,?);
+    // }
+
     public function all(){
+        
         $this->db->select('pro_details_id,pro_name,image,discription,RAM,memory,stock,price');
         $this->db->from('product_details');
         $this->db->join('product', 'product_details.pro_id = product.pro_id');

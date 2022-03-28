@@ -43,5 +43,11 @@ class Brand_model extends CI_model{
     // $this->db->join('category', 'brand.cat_id = category.cat_id');
     //  return $brand  = $this->db->get()->result_array();
     }
+
+    // public function cat($Id){
+    //     $this->db->where('brand_id',$Id);
+    //     return $brand = $this->db->get('brand')->row_array(); // select * from users where user_id = ?
+    // }
+
 }
 ?>
