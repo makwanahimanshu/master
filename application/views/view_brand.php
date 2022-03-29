@@ -30,11 +30,10 @@
                <thead>
                  <tr class="table100-head">
                    <th class="column1">ID</th>
-                   <th class="column2">Name</th>
+                   <th class="column2">Brand</th>
                    <th class="column3">Category</th>
                    <th class="column3">Edit</th>
-                   <th class="column4">Delete</th>
-              
+                   <th class="column4">Delete</th>     
                  </tr>
                </thead>
                <tbody>

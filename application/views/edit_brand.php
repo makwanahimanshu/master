@@ -20,11 +20,11 @@
                   <div class="template-demo">
                   
 
-                  <form method="post" name="createBrand" action="<?php echo base_url().'index.php/Brand_CI/create'; ?>">
+                  <form method="post" name="createBrand" value="<?php echo set_value('brand_name',$brand['brand_name']);?>" action="<?php echo base_url().'index.php/Brand_CI/create'; ?>">
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field mdc-text-field--outlined">
                           <input type="text" name="brand_name" class="mdc-text-field__input" id="text-field-hero-input">
-                          
+                          <?php echo form_error('brand_name'); ?>
                           <div class="mdc-notched-outline">
                             <div class="mdc-notched-outline__leading"></div>
                             <div class="mdc-notched-outline__notch">

@@ -1,22 +1,22 @@
 <?php
 class Product_model extends CI_model{
    
-   public function pro_create()
+   public function create()
     {
         $formArray=array();
         $formArray=array(
             "image" => $this->input->post('image'),
             "discription" => $this->input->post('discription'),
-            "RAM" => $this->input->post('RAM'),
+            "ram" => $this->input->post('ram'),
             "memory" => $this->input->post('memory'),
             "stock" => $this->input->post('stock'),
             "price" => $this->input->post('price'),
             
             
         );
-        echo "form aRAAY <pre>";
-            print_r($formArray);
-            exit;
+        
+            // print_r($formArray);
+            // exit;
               
        $this->db->insert('product_details',$formArray); //INSERT INTO users (name,email,created) values(?,?,?);
     }
@@ -26,10 +26,10 @@ class Product_model extends CI_model{
     // {
     //             $formArray = array();
     //             $formArray=array(
-    //                 // "image" => $this->input->post('image'),
+    //                 "image" => $this->input->post('image'),
     //                 "discription" => $this->input->post('discription'),
-    //                 // "RAM" => $this->input->post('RAM'),
-    //                 // "memory" => $this->input->post('memory'),
+    //                 "ram" => $this->input->post('ram'),
+    //                 "memory" => $this->input->post('memory'),
     //                 "stock" => $this->input->post('stock'),
     //                 "price" => $this->input->post('price')  
     //             );
@@ -49,21 +49,21 @@ class Product_model extends CI_model{
        
     }
     
-    // public function getUser($Id){
-    //     $this->db->where('id',$Id);
-    //     return $cars = $this->db->get('car_models')->row_array(); // select * from users where user_id = ?
-    // }
+    public function getProduct($Id){
+        $this->db->where('pro_details_id',$Id);
+        return $product = $this->db->get('product_details')->row_array(); // select * from users where user_id = ?
+    }
 
-    // public function updateCars($Id,$formArray){
-    //     $this->db->where('id',$Id);
-    //     $this->db->update('car_models',$formArray); //update users SET name = ? , email = ? where user_id = ? 
+    public function updateProduct($Id,$formArray){
+        $this->db->where('pro_details_id',$Id);
+        $this->db->update('product_details',$formArray); //update users SET name = ? , email = ? where user_id = ? 
         
-    // }
+    }
 
-    // public function deleteCars($Id){
-    //     $this->db->where('id',$Id);
-    //     $this->db->delete('car_models'); // DELETE FROM users Where user_id = ?
-    // }
+    public function deleteProduct($Id){
+        $this->db->where('pro_details_id',$Id);
+        $this->db->delete('product_details'); // DELETE FROM users Where user_id = ?
+    }
 
 }
 ?>

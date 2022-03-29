@@ -61,10 +61,10 @@
                       <td class="column7"><?php echo $product1['price'];?></td>
                       
                     <td>
-                      <a href="<?php echo base_url().'index.php/Category_CI/editCategory/'.$product1['pro_details_id'] ?>" class="btn btn-primary">Edit</a>
+                      <a href="<?php echo base_url().'index.php/Product_CI/editProduct/'.$product1['pro_details_id'] ?>" class="btn btn-primary">Edit</a>
                     </td>
                     <td>
-                      <a href="<?php echo base_url().'index.php/Category_CI/deleteCategory/'.$product1['pro_details_id'] ?>" class="btn btn-danger">Delete</a>
+                      <a href="<?php echo base_url().'index.php/Product_CI/deleteProduct/'.$product1['pro_details_id'] ?>" class="btn btn-danger">Delete</a>
                     </td> 
                     </tr>   
                     <?php } } else { ?>

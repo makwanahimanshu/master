@@ -1,3 +1,4 @@
+<?php include("session_set.php"); ?>
 <header class="mdc-top-app-bar">
         <div class="mdc-top-app-bar__row">
           <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
@@ -40,7 +41,8 @@
                       <i class="mdi mdi-settings-outline text-primary"></i>                      
                     </div>
                     <div class="item-content d-flex align-items-start flex-column justify-content-center">
-                      <h6 class="item-subject font-weight-normal">Logout</h6>
+                      
+                      <a href="<?php echo $base.'index.php/Login_CI/logout';?>">Logout</a>
                     </div>
                   </li>
                 </ul>
@@ -178,7 +180,7 @@
                       <i class="mdi mdi-logout-variant text-primary"></i>                      
                     </div>
                     <div class="item-content d-flex align-items-start flex-column justify-content-center">
-                      <h6 class="item-subject font-weight-normal">Logout</h6>
+                      <a href="<?php echo $base.'index.php/Login_CI/login';?>"><h6 class="item-subject font-weight-normal">Logout</h6></a>
                     </div>
                   </li>
                 </ul>
