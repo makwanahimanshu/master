@@ -128,14 +128,9 @@
                         </div>
                       </div> 
 
-<<<<<<< HEAD
 
                  <div class="mdc-select demo-width-class" data-mdc-auto-init="MDCSelect">
                       <input type="hidden" name="ram"  name="enhanced-select">
-=======
-                          <div class="mdc-select demo-width-class" data-mdc-auto-init="MDCSelect">
-                      <input type="hidden" name="ram">
->>>>>>> 864cccc641a26a195e3248fb0ba4db28cefd3dcb
                         <i class="mdc-select__dropdown-icon"></i>
                         <div class="mdc-select__selected-text"></div> 
                             <div class="mdc-select__menu mdc-menu-surface demo-width-class">
@@ -161,22 +156,14 @@
  
 
                           <div class="mdc-select demo-width-class" data-mdc-auto-init="MDCSelect">
-<<<<<<< HEAD
                       <input type="hidden" name="memory" name="enhanced-select">
-=======
-                      <input type="hidden" name="memory">
->>>>>>> 864cccc641a26a195e3248fb0ba4db28cefd3dcb
                         <i class="mdc-select__dropdown-icon"></i>
                         <div class="mdc-select__selected-text"></div> 
                             <div class="mdc-select__menu mdc-menu-surface demo-width-class">
                                 <ul  class="mdc-list">
                                 <li class="mdc-list-item mdc-list-item--selected" data-value="" aria-selected="true">
                                 </li>
-<<<<<<< HEAD
                                 <li class="mdc-list-item" data-value="32"> 
-=======
-                                <li class="mdc-list-item" data-value="32">
->>>>>>> 864cccc641a26a195e3248fb0ba4db28cefd3dcb
                                     32 GB
                                 </li>
                                 <li class="mdc-list-item" data-value="64">
