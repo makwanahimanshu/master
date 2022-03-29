@@ -35,7 +35,19 @@
                         </div>
                       </div>
 
-                      
+                      <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-group">
+                        <label class="form-label" >Country</label>
+                        <select class="form-control"  id="cat_id" name="cat_id" onkeypress="return countryOnly(event)">
+
+                        <?php if(!empty($category)) { 
+                            foreach($category as $country1){ ?>
+                                
+                                <option value="<?php echo $country1['cat_id'];?>"><?php echo $country1['cat_name'];?></option>
+                                <?php } } else {
+                              echo "data not found"  ;
+                            } ?>
+                        
                       
                   
                      <!--  <select class="form-control" id="cat_name" name="cat_name" >
@@ -83,31 +95,18 @@
                        
 
 
-                   <div class="mdc-select demo-width-class" data-mdc-auto-init="MDCSelect">
-                      <input type="hidden" name="cat_name"  name="enhanced-select">
-                        <i class="mdc-select__dropdown-icon"></i>
-                        <div class="mdc-select__selected-text"></div> 
-                            <div class="mdc-select__menu mdc-menu-surface demo-width-class">
-                                <ul  class="mdc-list">
+                            <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-group">
+                        <label class="form-label" >Country</label>
+                        <select class="form-control"  id="con_id" name="con_id" onkeypress="return countryOnly(event)">
 
-                                <?php if(!empty($category)) { 
-                                  foreach($category as $category1){ ?>
+                        <?php if(!empty($country)) { 
+                            foreach($country as $country1){ ?>
                                 
-                                    <option value="<?php echo $category1['cat_id'];?>"><?php echo $category1['cat_name'];?></option> -->
-                                    <li class="mdc-list-item" value="<?php echo $category1['cat_id'];?>"><?php echo $category1['cat_name'];?> </li>
-
-
-                                      <?php } } else {
-                                    echo "data not found"  ;
-                                  } ?>
-                             
-                                </ul>
-                            </div>
-                                <?php echo form_error('cat_name'); ?>
-                                <span class="mdc-floating-label">Category</span>
-                               
-                            <div class="mdc-line-ripple"></div>
-                          </div>
+                                <option value="<?php echo $country1['con_id'];?>"><?php echo $country1['name'];?></option>
+                                <?php } } else {
+                              echo "data not found"  ;
+                            } ?>
                         
                  
 
