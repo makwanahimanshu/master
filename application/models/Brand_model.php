@@ -7,6 +7,7 @@ class Brand_model extends CI_model{
         // exit;
         // INSERT INTO `brand` (`brand_id`, `brand_name`, `cat_id`) VALUES (NULL, 'TITAN', '1');
 
+        // $category = $this->db->get('category')->row_array();
 
         $this->db->insert('brand',$formArray);
         // $this->db->insert('category',$formArray);
@@ -18,6 +19,24 @@ class Brand_model extends CI_model{
         //  $this->db->insert('brand,category',$formArray);
 
 
+    }
+     public function cat(){
+        // $this->db->select('cat_name');
+        // $query1 = $this->db->get('category');
+        // echo "jjj" ;
+        // print_r($query1);
+        // exit;
+        // $this->db->select('*');
+        // $car=$this->db->from('category');
+        // echo "jjj" ;
+        // print_r($car);
+        // exit;
+       // $this->db->where('cat_id');
+         $category = $this->db->get('category')->row_array();
+        // echo "jjj" ;
+        // print_r($category);
+        // exit;
+        // // select * from users where user_id = ?
     }
 
     public function all(){
@@ -57,10 +76,7 @@ class Brand_model extends CI_model{
     //  return $brand  = $this->db->get()->result_array();
     }
 
-    // public function cat($Id){
-    //     $this->db->where('brand_id',$Id);
-    //     return $brand = $this->db->get('brand')->row_array(); // select * from users where user_id = ?
-    // }
+   
 
 }
 ?>

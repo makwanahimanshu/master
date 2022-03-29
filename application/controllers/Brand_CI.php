@@ -25,8 +25,10 @@ class Brand_CI extends CI_Controller {
             // print_r($_POST);
             // exit;
             $brand = $this->Brand_model->all();
+           // $category=$this->Brand_model->cat();
             $data = array();
             $data['brand'] = $brand;
+            //$data['category'] = $category;
             $this->load->view('view_brand',$data);
         }
 
@@ -35,6 +37,18 @@ class Brand_CI extends CI_Controller {
           if($this->form_validation->run() == false){
                $this->load->view('add_brand');
           } else {
+
+
+            
+            $category=$this->Brand_model->cat();
+            $data = array();
+            
+            $data['category'] = $category;
+            $this->load->view('add_brand',$data);
+
+
+
+
               $formArray = array();
               $formArray['brand_name'] = $this->input->post('brand_name');
             //   $formArray['cat_name'] = $this->input->post('cat_name');
