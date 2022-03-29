@@ -1,4 +1,26 @@
     <!-- partial:../../partials/_sidebar.php -->
+
+
+    <!-- <script>
+  function validateForm() {
+  var lsname=document.myForm.discription.value ; 
+            //var lsname = document.forms["myForm"]["last_name"];  
+            
+             if ( lsname == '' ){ 
+                 document.getElementById('errorname').innerHTML="Please enter a valid name";  
+                 lsname.focus(); 
+                 return false; 
+             }
+           } </script>
+
+    <style>
+         .error{
+            color: #D8000C;
+            background-color: #FFBABA;
+         }
+      </style> -->
+
+
         <!-- $base.'index.php/Welcome/sidebar' -->
         <?php include_once "sidebar.php"; ?>
          
@@ -12,90 +34,193 @@
            <!-- partial -->
         <div class="page-wrapper mdc-toolbar-fixed-adjust">
         <main class="content-wrapper">
+       
            <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
               <div class="mdc-layout-grid__cell--span-12">
                 <div class="mdc-card">
-                  <h5 class="card-title"><b>Edit Category</b></h5>
+                  <h5 class="card-title"><b>Product</b></h5>
                   <div class="template-demo">
                     <!-- <div class="mdc-layout-grid__inner">
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field">
                           <input class="mdc-text-field__input" id="text-field-hero-input">
                           <div class="mdc-line-ripple"></div>
-                          <label for="text-field-hero-input" class="mdc-floating-label">Name</label>
+                          <label for="text-field-hero-input" class="mdc-floating-label">Name</label
                         </div>
                       </div> -->
-                    <form method="post" name="editCategory" action="<?php echo base_url().'index.php/Category_CI/editCategory/'.$category['cat_id']; ?>">
-            
-                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field mdc-text-field--outlined">
-                          <input type="text" class="mdc-text-field__input" id="text-field-hero-input" name="cat_name"  value="<?php echo set_value('cat_name',$category['cat_name']);?>">
-                          <?php echo form_error('cat_name'); ?>  
-                          <div class="mdc-notched-outline">
-                              <div class="mdc-notched-outline__leading"></div>
-                                <div class="mdc-notched-outline__notch">
-                                  <label for="text-field-hero-input" class="mdc-floating-label">Category Name</label>
-                                </div>
-                                <div class="mdc-notched-outline__trailing"></div>
-                            </div>
-
-                        </div>
-                      </div>
-                   
-                      <!-- <div class="mdc-layout-grid">
-                            <div class="d-grid gap-2 col-6 mx-auto">
-                               <button class="mdc-button mdc-button--raised">
-                                   Add Category
-                                </button>
-                            </div>
-                        </div> -->
-
-                        <div class="mb-3">
-                            <button class="mdc-button mdc-button--raised" name="save"> Add Category</button>
-                            <a href="<?php echo base_url().'index.php/Category_CI/viewcategory';?>" class="mdc-button mdc-button--raised filled-button--dark mdc-ripple-upgraded">Cancel</a>
-                        </div>
-                   </form>
-                        <!-- <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
-                          <a href="<?php echo $base.' '; ?>" class="mdc-button mdc-button--raised w-100">
-                            Login
-                          </a>
-                        </div> -->
-
+               
+                 <form method="post" name="editProduct" action="<?php echo base_url().'index.php/Brand_CI/editBrand/'.$brand['brand_id']; ?>">
                       <!-- <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon">
-                          <i class="material-icons mdc-text-field__icon">favorite</i>
-                          <input class="mdc-text-field__input" id="text-field-hero-input">
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                          <input type="text" name="name" value="<?php echo set_value('name');?>" class="mdc-text-field__input" id="text-field-hero-input">
+                          <?php echo form_error('name'); ?>
                           <div class="mdc-notched-outline">
                             <div class="mdc-notched-outline__leading"></div>
                             <div class="mdc-notched-outline__notch">
-                              <label for="text-field-hero-input" class="mdc-floating-label">Name</label>
+                              <label for="text-field-hero-input" class="mdc-floating-label">Product Name</label>
                             </div>
                             <div class="mdc-notched-outline__trailing"></div>
                           </div>
                         </div>
-                      </div> -->
-                      <!-- <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon">
-                          <i class="material-icons mdc-text-field__icon">visibility</i>
-                          <input class="mdc-text-field__input" id="text-field-hero-input">
+                       </div> -->
+                       
+            
+            
+                       
+                     <!-- <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                        <b><?php if(isset($response)) echo $response; ?></b>
+                        <input type="file" name="file" value="<?php echo set_value('image');?>" class="mdc-text-field__input" id="image">
+                       <?php echo form_error('image'); ?>
                           <div class="mdc-notched-outline">
-                                 <div class="mdc-notched-outline__leading"></div> 
-                                 <div class="mdc-notched-outline__notch">
-                              <label for="text-field-hero-input" class="mdc-floating-label">Name</label>
-                            </div> 
-                             <div class="mdc-notched-outline__trailing"></div> 
+                            <div class="mdc-notched-outline__leading"></div>
+                            <div class="mdc-notched-outline__notch">
+                              <label for="text-field-hero-input" class="mdc-floating-label">Image</label>
+                            </div>
+                            <div class="mdc-notched-outline__trailing"></div>
                           </div>
                         </div>
-                      </div> -->
+                      </div>     
+                <div style="color:red;"><?php echo form_error('file'); ?></div>  -->
+ 
+                <input type="file" name="image" value="<?php echo set_value('image',$product['image']);?>" class="mdc-text-field__input" id="image">
+                
+            
+
+                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                          <input type="text" name="discription" value="<?php echo set_value('discription',$product['discription']);?>" class="mdc-text-field__input" id="text-field-hero-input">
+                        <?php echo form_error('discription'); ?>
+                          <div class="mdc-notched-outline">
+                            <div class="mdc-notched-outline__leading"></div>
+                            <div class="mdc-notched-outline__notch">
+                              <label for="text-field-hero-input" class="mdc-floating-label">Product Discription</label>
+                            </div>
+                            <div class="mdc-notched-outline__trailing"></div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                   
+                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                          <input type="number" name="stock" value="<?php echo set_value('stock',$product['stock']);?>" class="mdc-text-field__input" id="text-field-hero-input">
+                          <?php echo form_error('stock'); ?>
+                          <div class="mdc-notched-outline">
+                            <div class="mdc-notched-outline__leading"></div>
+                            <div class="mdc-notched-outline__notch">
+                              <label for="text-field-hero-input" class="mdc-floating-label">Stock Quantity</label>
+                            </div>
+                            <div class="mdc-notched-outline__trailing"></div>
+                          </div>
+                        </div>
+                    </div>
+
+
+                 <div class="mdc-select demo-width-class" data-mdc-auto-init="MDCSelect">
+                      <input type="hidden" name="ram"  name="enhanced-select" value="<?php echo set_value('RAM',$product['RAM']);?>">
+                        <i class="mdc-select__dropdown-icon"></i>
+                        <div class="mdc-select__selected-text"></div> 
+                            <div class="mdc-select__menu mdc-menu-surface demo-width-class">
+                                <ul  class="mdc-list">
+                                <li class="mdc-list-item mdc-list-item--selected" data-value="" aria-selected="true">
+                                </li>
+                                <li class="mdc-list-item" data-value="4">
+                                    4 GB
+                                </li>
+                                <li class="mdc-list-item" data-value="6">
+                                    6 GB
+                                </li>
+                                <li class="mdc-list-item" data-value="8">
+                                     8 GB
+                                </li>
+                                </ul>
+                            </div>
+                                <?php echo form_error('ram'); ?>
+                                <span class="mdc-floating-label">Product RAM</span>
+                               
+                            <div class="mdc-line-ripple"></div>
+                          </div>
+ 
+
+                          <div class="mdc-select demo-width-class" data-mdc-auto-init="MDCSelect">
+                      <input type="hidden" name="memory" value="<?php echo set_value('memory',$product['memory']); ?>">
+                        <i class="mdc-select__dropdown-icon"></i>
+                        <div class="mdc-select__selected-text"></div> 
+                            <div class="mdc-select__menu mdc-menu-surface demo-width-class">
+                                <ul  class="mdc-list">
+                                <li class="mdc-list-item mdc-list-item--selected" data-value="" aria-selected="true">
+                                </li>
+                                <li class="mdc-list-item" data-value="32"> 
+                                    32 GB
+                                </li>
+                                <li class="mdc-list-item" data-value="64">
+                                    64 GB
+                                </li>
+                                <li class="mdc-list-item" data-value="128">
+                                     128 GB
+                                </li>
+                                </ul>
+                            </div>
+                              <?php echo form_error('memory'); ?>
+                                <span class="mdc-floating-label">Product Memory</span>
+                               
+                            <div class="mdc-line-ripple"></div>
+                          </div> 
+
+ 
+
+                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+                          <div class="mdc-text-field mdc-text-field--outlined">
+                            <input type="number" name="price" value="<?php echo set_value('price',$product['price']);?>" class="mdc-text-field__input" id="text-field-hero-input">
+                            <?php echo form_error('price'); ?>
+                            <div class="mdc-notched-outline">
+                              <div class="mdc-notched-outline__leading"></div>
+                              <div class="mdc-notched-outline__notch">
+                                <label for="text-field-hero-input" class="mdc-floating-label">Product Price</label>
+                              </div>
+                              <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                          </div>
+                        </div> 
+                  
+       
+                           <!-- <div class="mdc-layout-grid">
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                               <button class="mdc-button mdc-button--raised">
+                                   Add Product
+                               </button>
+                            </div>
+                        </div> 
+ -->
+
+
+
+                        <div class="mb-3">
+                            <button class="mdc-button mdc-button--raised" value="save" name="save">Create</button>
+                            <a href="<?php echo base_url().'index.php/Product_CI/viewproduct';?>" class="mdc-button mdc-button--raised filled-button--dark mdc-ripple-upgraded">Cancel</a>
+                        </div>
+
+      
+                   </form>
+                     
+
+
+
+
+                   <!-- 28/3/2022 3:59 pm -->
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
         
           </main>
-          </div>
+  
+
              <!-- partial:../../partials/_footer.php -->
              
              <?php include("footer.php"); ?> 
