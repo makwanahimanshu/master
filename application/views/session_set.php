@@ -6,7 +6,7 @@
     
     $email=$this->session->userdata('email');
       if($email){
-      
+        
        
       }else{
         redirect(base_url() .'index.php/Login_CI/login');
@@ -16,6 +16,10 @@
       //if($session_data)
       // {
       
-      //     $this->input->set_cookie('admin',$email,'60');
-     
+      //     $this->input->set_cookie('admin',$email,'60');   
+
 ?>
+
+      
+
+

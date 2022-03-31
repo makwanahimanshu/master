@@ -26,7 +26,7 @@ exit;
                   <div class="template-demo">
                   
 
-                  <form method="post" name="createBrand" action="<?php echo base_url().'index.php/Brand_CI/create'; ?>">
+                  <form method="post" name="createBrand" action="<?php echo base_url().'index.php/Brand_CI/create1'; ?>">
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field mdc-text-field--outlined">
                           <input type="text" name="brand_name" class="mdc-text-field__input" id="brand_name">
@@ -41,46 +41,27 @@ exit;
                         </div>
                       </div>
 
-               <div  id="cat_name" name="cat_name">
-                        <?php 
-                 
-                        
-                        if(!empty($category))
-                       
-                        { 
-                            // echo "<pre>";
-                            // print_r($category);
-                            // exit;
 
-                            
-                            foreach($category as $country1){ 
-                            //  echo "<pre>";
-                            // print_r($category['cat_name']);
-                            // print_r($category['cat_name']);
-                            
-                              echo  $category['cat_name'];
-                                }
-                               } 
-                               else 
-                               {      
-                                            
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-group">
+                        <label class="form-label" >Category</label>
+                        <select class="form-control"  id="cat_id" name="cat_id">
+
+                        <?php if(!empty($category)) { 
+                            foreach($category as $category1){ ?>
+                                
+                                <option value="<?php echo $category1['cat_id'];?>"><?php echo $category1['cat_name'];?></option>
+                                <?php } } else {
                               echo "data not found"  ;
-                              } 
-                              ?>
-                    
-                            </div>   
-                  
-                         
-           
-                
-                       
+                            } ?>
+                          </select>
+                       </div>
+                  </div>
+               
 
-
-                 
-                 
 
                       <div class="mb-3">
-                            <button class="mdc-button mdc-button--raised" name="save" value="Save Data"/>Add Brand</button>
+                            <button class="mdc-button mdc-button--raised" name="save" value="save"/>Add Brand</button>
                             <a href="<?php echo base_url().'index.php/Brand_CI/viewbrand';?>" class="mdc-button mdc-button--raised filled-button--dark mdc-ripple-upgraded">Cancel</a>
                         </div>
                    </form>

@@ -37,49 +37,7 @@
 
                       
                       
-                  
-                     <!--  <select class="form-control" id="cat_name" name="cat_name" >
-                        <i class="mdc-select__dropdown-icon"></i>
-                        <div class="mdc-select__selected-text"></div> 
-                            <div class="mdc-select__menu mdc-menu-surface demo-width-class">
-                                <?php if(!empty($category)) { 
-                                foreach($category as $category1){ ?>
-                                    
-                                    <option value="<?php echo $category1['cat_id'];?>"><?php echo $category1['cat_name'];?></option>
-                                    <?php } } else {
-                                  echo "data not found"  ;
-                                } ?>
-                              
-                            </div>
-                              <?php echo form_error('cat_name'); ?>
-                                <span class="mdc-floating-label">Product Memory</span>
-                               
-                            <div class="mdc-line-ripple"></div>
-                            </select>  -->
-                          
-                           
-           
-                
-<!--                        
-                          <div class="row">
-                            <div class="col-md-6 mb-4 pb-2">
-                                <div class="form-group">
-                                    
-                                    <label class="form-label" >Category</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                
-                                    <select class="form-control" id="cat_name" name="cat_name" >
-                                      <?php if(!empty($category)) { 
-                                        foreach($category as $category1){ ?>
-                                            
-                                            <option value="<?php echo $category1['cat_id'];?>"><?php echo $category1['cat_name'];?></option>
-                                            <?php } } else {
-                                          echo "data not found"  ;
-                                        } ?>
-                                        
-                                    </select>
-                                </div>
-                              
-                            </div>   -->
+                 
                        
 
 
