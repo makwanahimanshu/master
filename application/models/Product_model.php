@@ -11,18 +11,13 @@ class Product_model extends CI_model{
             "memory" => $this->input->post('memory'),
             "stock" => $this->input->post('stock'),
             "price" => $this->input->post('price'),
-            
-            
+                
         );
-        
-            // print_r($formArray);
-            // exit;
-              
        $this->db->insert('product_details',$formArray); //INSERT INTO users (name,email,created) values(?,?,?);
     }
 
 
-    // function create()
+    // public function create($data)
     // {
     //             $formArray = array();
     //             $formArray=array(

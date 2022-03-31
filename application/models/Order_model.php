@@ -10,16 +10,16 @@ class Order_model extends CI_model{
        
     }
     
-    // public function getUser($Id){
-    //     $this->db->where('id',$Id);
-    //     return $cars = $this->db->get('car_models')->row_array(); // select * from users where user_id = ?
-    // }
+    public function getOrder($Id){
+        $this->db->where('order_id',$Id);
+        return $order = $this->db->get('order_tbl')->row_array(); // select * from users where user_id = ?
+    }
 
-    // public function updateCars($Id,$formArray){
-    //     $this->db->where('id',$Id);
-    //     $this->db->update('car_models',$formArray); //update users SET name = ? , email = ? where user_id = ? 
+    public function updateOrder($Id,$formArray){
+        $this->db->where('order_id',$Id);
+        $this->db->update('order_tbl',$formArray); //update users SET name = ? , email = ? where user_id = ? 
         
-    // }
+    }
 
     // public function deleteCars($Id){
     //     $this->db->where('id',$Id);

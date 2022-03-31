@@ -6,7 +6,6 @@
   <?php
     $base = $this->config->item("base_url");
   ?>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Material Dash</title>
@@ -87,7 +86,7 @@
               </a>
             </div>
               <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-drawer-link" href="<?php echo $base.'index.php/Order_CI/order';?>" >
+              <a class="mdc-drawer-link" href="<?php echo $base.'index.php/Order_CI/vieworder';?>" >
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">list</i>
                 Order Master
               </a>

@@ -1,48 +1,56 @@
 <?php
 class Brand_model extends CI_model{
-    function create($formArray)
-    {
-        // echo "hyyy<pre>";
-        // print_r($formArray);
-        // exit;
-        // INSERT INTO `brand` (`brand_id`, `brand_name`, `cat_id`) VALUES (NULL, 'TITAN', '1');
-
-        // $category = $this->db->get('category')->row_array();
-
-        $this->db->insert('brand',$formArray);
-        // $this->db->insert('category',$formArray);
-
-        // $this->db->insert('brand_name,cat_name');
-        // $this->db->from('brand');
-        // $this->db->join('category', 'brand.cat_id = category.cat_id');
-        //  return $brand  = $this->db->get()->result_array();
-        //  $this->db->insert('brand,category',$formArray);
-
-
-    }
-     public function cat(){
-        // $this->db->select('cat_name');
-        // $query1 = $this->db->get('category');
-        // echo "jjj" ;
-        // print_r($query1);
-        // exit;
-        // $this->db->select('*');
-        // $car=$this->db->from('category');
-        // echo "jjj" ;
-        // print_r($car);
-        // exit;
-       // $this->db->where('cat_id');
-         $category = $this->db->get('category')->row_array();
-        // echo "jjj" ;
-        // print_r($category);
-        // exit;
-        // // select * from users where user_id = ?
-    }
-
-    public function all(){
+    // function create($formArray)
+    // {
+    //     // echo "hyyy<pre>";
+    //     // print_r($formArray);
+    //     // exit;
+    //     $this->db->insert('brand',$formArray); //INSERT INTO users (name,email,created) values(?,?,?);
        
-    // SELECT brand_name,cat_name,brand_id FROM `brand` INNER JOIN `category` ON brand.cat_id = category.cat_id;
-    //this JION method to two tables
+    // }
+
+    // public function create($formArray)
+    // {
+    //     $formArray=array();
+    //     $formArray=array(
+    //         "brand_name" => $this->input->post('brand_name'),   
+    //         "cat_id" => $this->input->post('cat_id'),    
+    //     );
+    //    $this->db->insert('brand',$formArray); //INSERT INTO users (name,email,created) values(?,?,?);
+
+    // }
+
+    public function create1()
+    {
+        $formArray = array();
+            $formArray  = array(
+
+
+                "brand_name" => $this->input->post('brand_name'),
+                "cat_id" => $this->input->post('cat_id'),    
+
+            );
+         
+            // echo "form aRAAY <pre>";
+            // print_r($formArray);
+            // exit;
+            $this->db->insert("brand",$formArray);
+      
+    }
+ 
+
+
+     public function cat(){
+        // $this->db->where('cat_name',$cat_name);
+       $this->db->where('cat_id',1);
+       $category = $this->db->get('category')->result_array();       // select * from users where user_id = ?
+        
+    }
+
+   
+    public function all(){
+        // SELECT brand_name,cat_name,brand_id FROM `brand` INNER JOIN `category` ON brand.cat_id = category.cat_id;
+        //this JION method to two tables
         $this->db->select('brand_id,brand_name,cat_name');
         $this->db->from('brand');
         $this->db->join('category', 'brand.cat_id = category.cat_id');
