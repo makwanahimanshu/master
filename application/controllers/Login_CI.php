@@ -87,5 +87,7 @@ class Login_CI extends CI_Controller {
             redirect(base_url() .'index.php/Login_CI/login');
         }
 
+       
+
 
 }

@@ -91,6 +91,24 @@
                     </div>
 
 
+<<<<<<< HEAD
+                    <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                          <input type="number" name="price" value="<?php echo set_value('price');?>" class="mdc-text-field__input" id="text-field-hero-input">
+                          <?php echo form_error('price'); ?>
+                          <div class="mdc-notched-outline">
+                            <div class="mdc-notched-outline__leading"></div>
+                            <div class="mdc-notched-outline__notch">
+                              <label for="text-field-hero-input" class="mdc-floating-label">Product Price</label>
+                            </div>
+                            <div class="mdc-notched-outline__trailing"></div>
+                          </div>
+                        </div>
+                      </div> 
+
+
+=======
+>>>>>>> 86f630abc40ca4676bc6d7ee9a8a6353f411019f
                  <div class="mdc-select demo-width-class" data-mdc-auto-init="MDCSelect">
                       <input type="hidden" name="ram"  name="enhanced-select">
                         <i class="mdc-select__dropdown-icon"></i>
