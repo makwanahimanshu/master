@@ -2,7 +2,7 @@
 class Product_model extends CI_model{
    
    public function create()
-    {
+    {   
         $formArray=array();
         $formArray=array(
             "pro_name" => $this->input->post('pro_name'),
