@@ -24,14 +24,19 @@ class Brand_CI extends CI_Controller {
             $brand = $this->Brand_model->all();
             $data = array();
             $data['brand'] = $brand;
+
             $this->load->view('view_brand',$data);
         }
 
              public function create(){
-           
-                $category= $this->Brand_model->cat();
+
+
+
+                $category = array();
+                $category = $this->Brand_model->cat();
                 $data = array();
                 $data['category'] = $category;
+               
                 $this->load->view('add_brand',$data);
              }
 
@@ -60,32 +65,39 @@ class Brand_CI extends CI_Controller {
                     
                     }
 
-            	
-
-	   
-
+        
    
 
-        // public function editBrand($Id){
-        //     $this->load->model('Brand_model');
-        //     $brand = $this->Brand_model->getBrand($Id);
-        //     $data = array();
-        //     $data['brand'] = $brand;
+        public function editBrand($Id){
 
-        //     $this->form_validation->set_rules('brand_name','Brand name','required');
 
-        //     if($this->form_validation->run()== false){
+            $this->load->model('Brand_model');
+            $category = $this->Brand_model->cat();
+            $data = array();
+            $data['category'] = $category;
 
-        //         $this->load->view('edit_brand',$data);
-        //     }else {
-        //         //update cars record
-        //         $formArray = array();
-        //         $formArray['brand_name'] = $this->input->post('brand_name');
-        //         $this->Brand_model->updateBrand($Id,$formArray);
-        //         $this->session->set_flashdata('success','Record updated successfully');
-        //         redirect(base_url().'index.php/Brand_CI/viewbrand');
-        //     }
-        // }
+            $this->load->model('Brand_model');
+            $brand = $this->Brand_model->getBrand($Id);
+           
+            $data['brand'] = $brand;
+
+            $this->form_validation->set_rules('brand_name','brand_name','required');
+
+            if($this->form_validation->run()=== TRUE){
+
+                $formArray = array();
+                $formArray['brand_name'] = $this->input->post('brand_name');
+                $formArray['cat_id'] = $this->input->post('cat_id');
+                $this->Brand_model->updateBrand($Id,$formArray);
+                $this->session->set_flashdata('success','Record updated successfully');
+                redirect(base_url().'index.php/Brand_CI/viewbrand');
+                
+            }else {
+                //update cars record
+            
+                $this->load->view('edit_brand',$data);
+            }
+        }
 
 
         public function deleteBrand($Id){
@@ -102,7 +114,7 @@ class Brand_CI extends CI_Controller {
             }
   
 }
-          
+          ?>
 
 
       

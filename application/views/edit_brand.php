@@ -1,5 +1,8 @@
     <!-- partial:../../partials/_sidebar.php -->
-        <!-- $base.'index.php/Welcome/sidebar' -->
+    
+ 
+    
+    <!-- $base.'index.php/Welcome/sidebar' -->
         <?php include_once "sidebar.php"; ?>
          
          <!-- partial -->
@@ -20,10 +23,10 @@
                   <div class="template-demo">
                   
 
-                  <form method="post" name="createBrand" value="<?php echo set_value('brand_name',$brand['brand_name']);?>" action="<?php echo base_url().'index.php/Brand_CI/create'; ?>">
+                  <form method="post"  action="<?php echo base_url().'index.php/Brand_CI/editBrand/'.$brand['brand_id']; ?>">
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field mdc-text-field--outlined">
-                          <input type="text" name="brand_name" class="mdc-text-field__input" id="text-field-hero-input">
+                          <input type="text" name="brand_name" value="<?php echo set_value('brand_name',$brand['brand_name']);?>" class="mdc-text-field__input" id="text-field-hero-input">
                           <?php echo form_error('brand_name'); ?>
                           <div class="mdc-notched-outline">
                             <div class="mdc-notched-outline__leading"></div>
@@ -35,34 +38,29 @@
                         </div>
                       </div>
 
-                      
-                      
-                 
-                       
+                      <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-group">
+                        <label class="form-label" >Category</label>
+                        <select class="select form-control"  id="cat_id" name="cat_id">
 
+                        <?php
+                            $catid=intval($brand['cat_id']);
 
-                   <div class="mdc-select demo-width-class" data-mdc-auto-init="MDCSelect">
-                      <input type="hidden" name="cat_name"  name="enhanced-select">
-                        <i class="mdc-select__dropdown-icon"></i>
-                        <div class="mdc-select__selected-text"></div> 
-                            <div class="mdc-select__menu mdc-menu-surface demo-width-class">
-                                <ul  class="mdc-list">
+                            echo "<option value=''>Select state</option>";
 
-                                <?php if(!empty($category)) { 
-                                  foreach($category as $category1){ ?>
+                            foreach ($category as $value) {
+                                $cid = $value['cat_id'];
+                                $name = $value['cat_name'];
                                 
-                                    <option value="<?php echo $category1['cat_id'];?>"><?php echo $category1['cat_name'];?></option> -->
-                                    <li class="mdc-list-item" value="<?php echo $category1['cat_id'];?>"><?php echo $category1['cat_name'];?> </li>
-
-
-                                      <?php } } else {
-                                    echo "data not found"  ;
-                                  } ?>
-                             
-                                </ul>
-                            </div>
+                                ?>
+                                <option <?php echo $cid == $catid ? "selected='selected'" : ""; ?> value=<?php echo $cid  ; ?> > <?php echo $name; ?> </option>
+                            <?php }
+                            ?>
+                          </select>
+                       </div>
+                  </div>
                                 <?php echo form_error('cat_name'); ?>
-                                <span class="mdc-floating-label">Category</span>
+                                
                                
                             <div class="mdc-line-ripple"></div>
                           </div>
@@ -70,8 +68,9 @@
                  
 
                       <div class="mb-3">
-                            <button class="mdc-button mdc-button--raised" name="save" value="Save Data"/>Add Brand</button>
+                            <button class="mdc-button mdc-button--raised" name="save" value="Save Data">Add Brand</button>
                             <a href="<?php echo base_url().'index.php/Brand_CI/viewbrand';?>" class="mdc-button mdc-button--raised filled-button--dark mdc-ripple-upgraded">Cancel</a>
+                            </button>
                         </div>
                    </form>
                       

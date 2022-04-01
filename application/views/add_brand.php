@@ -1,7 +1,7 @@
   <?php
-echo "hello<pre>";
-print_r($category);
-exit;
+// echo "hello<pre>";
+// print_r($brand);
+// exit;
   ?>
   
   <!-- partial:../../partials/_sidebar.php -->
@@ -48,6 +48,7 @@ exit;
                         <select class="form-control"  id="cat_id" name="cat_id">
 
                         <?php if(!empty($category)) { 
+                          echo "<option value=''>Select Categor</option>";
                             foreach($category as $category1){ ?>
                                 
                                 <option value="<?php echo $category1['cat_id'];?>"><?php echo $category1['cat_name'];?></option>

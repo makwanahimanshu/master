@@ -1,37 +1,17 @@
-    <!-- partial:../../partials/_sidebar.php -->
+ <!-- $base.'index.php/Welcome/sidebar' -->
+ <?php include_once "sidebar.php"; ?>
 
-
-    <!-- <script>
-  function validateForm() {
-  var lsname=document.myForm.discription.value ; 
-            //var lsname = document.forms["myForm"]["last_name"];  
-            
-             if ( lsname == '' ){ 
-                 document.getElementById('errorname').innerHTML="Please enter a valid name";  
-                 lsname.focus(); 
-                 return false; 
-             }
-           } </script>
-
-    <style>
-         .error{
-            color: #D8000C;
-            background-color: #FFBABA;
-         }
-      </style> -->
-
-
-        <!-- $base.'index.php/Welcome/sidebar' -->
-        <?php include_once "sidebar.php"; ?>
+ 
          
          <!-- partial -->
      
          <div class="main-wrapper mdc-drawer-app-content">
-           <!-- partial:../../partials/_navbar.php -->
-           
+           <!-- partial:../../partials/_navbar.php -->  
            <?php include_once "navbar.php"; ?>
-     
-           <!-- partial -->
+           <form method="post" action="<?php echo base_url().'index.php/Product_CI/editProduct/'.$product['pro_id']; ?>">
+
+          
+         
         <div class="page-wrapper mdc-toolbar-fixed-adjust">
         <main class="content-wrapper">
        
@@ -41,20 +21,36 @@
                 <div class="mdc-card">
                   <h5 class="card-title"><b>Product</b></h5>
                   <div class="template-demo">
-                    <!-- <div class="mdc-layout-grid__inner">
-                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field">
-                          <input class="mdc-text-field__input" id="text-field-hero-input">
-                          <div class="mdc-line-ripple"></div>
-                          <label for="text-field-hero-input" class="mdc-floating-label">Name</label
-                        </div>
-                      </div> -->
-               
-                 <form method="post" name="editProduct" action="<?php echo base_url().'index.php/Product_CI/editProduct/'.$product['pro_id']; ?>">
-                      <!-- <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-group">
+                        <label class="form-label" >Brand</label>
+                        <select class="select form-control"  id="brand_id" name="brand_id">
+
+                        <?php
+                            $brandid=intval($product['brand_id']);
+
+                            echo "<option value=''>Select Brand</option>";
+
+                            foreach ($brand as $value) {
+                                $pid = $value['brand_id'];
+                                $name = $value['brand_name'];
+                                
+                                ?>
+                                <option <?php echo $pid == $brandid ? "selected='selected'" : ""; ?> value=<?php echo $pid  ; ?> > <?php echo $name; ?> </option>
+                            <?php }
+                            ?>
+                          </select>
+                       </div>
+                  </div>
+
+
+                  
+                  <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field mdc-text-field--outlined">
-                          <input type="text" name="name" value="<?php echo set_value('name');?>" class="mdc-text-field__input" id="text-field-hero-input">
-                          <?php echo form_error('name'); ?>
+                          <input type="textarea" cols="50" rows="40" name="pro_name" value="<?php echo set_value('pro_name',$product['pro_name']);?>" 
+                          class="mdc-text-field__input" id="text-field-hero-input">
+                        <?php echo form_error('pro_name'); ?>
                           <div class="mdc-notched-outline">
                             <div class="mdc-notched-outline__leading"></div>
                             <div class="mdc-notched-outline__notch">
@@ -63,15 +59,15 @@
                             <div class="mdc-notched-outline__trailing"></div>
                           </div>
                         </div>
-                       </div> -->
-                       
-            
-            
-                       
-                     <!-- <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+                      </div>
+
+
+                  <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field mdc-text-field--outlined">
                         <b><?php if(isset($response)) echo $response; ?></b>
-                        <input type="file" name="file" value="<?php echo set_value('image');?>" class="mdc-text-field__input" id="image">
+                    <input type="file" name="image" 
+                    value="<?php echo set_value('image',$product['image']);?>"
+                    class="mdc-text-field__input" id="image">    
                        <?php echo form_error('image'); ?>
                           <div class="mdc-notched-outline">
                             <div class="mdc-notched-outline__leading"></div>
@@ -82,15 +78,16 @@
                           </div>
                         </div>
                       </div>     
-                <div style="color:red;"><?php echo form_error('file'); ?></div>  -->
+                <div style="color:red;"><?php echo form_error('file'); ?></div> 
  
-                <input type="file" name="image" value="<?php echo set_value('image',$product['image']);?>" class="mdc-text-field__input" id="image">
+               
                 
             
 
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field mdc-text-field--outlined">
-                          <input type="text" name="discription" value="<?php echo set_value('discription',$product['discription']);?>" class="mdc-text-field__input" id="text-field-hero-input">
+                          <input type="textarea" cols="50" rows="40" name="discription"value="<?php echo set_value('discription',$product['discription']);?>"
+                           class="mdc-text-field__input" id="text-field-hero-input">
                         <?php echo form_error('discription'); ?>
                           <div class="mdc-notched-outline">
                             <div class="mdc-notched-outline__leading"></div>
@@ -102,25 +99,13 @@
                         </div>
                       </div>
 
-
-                   
-                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
-                        <div class="mdc-text-field mdc-text-field--outlined">
-                          <input type="number" name="stock" value="<?php echo set_value('stock',$product['stock']);?>" class="mdc-text-field__input" id="text-field-hero-input">
-                          <?php echo form_error('stock'); ?>
-                          <div class="mdc-notched-outline">
-                            <div class="mdc-notched-outline__leading"></div>
-                            <div class="mdc-notched-outline__notch">
-                              <label for="text-field-hero-input" class="mdc-floating-label">Stock Quantity</label>
-                            </div>
-                            <div class="mdc-notched-outline__trailing"></div>
-                          </div>
-                        </div>
-                    </div>
+                     
 
 
                  <div class="mdc-select demo-width-class" data-mdc-auto-init="MDCSelect">
-                      <input type="hidden" name="ram"  name="enhanced-select" value="<?php echo set_value('RAM',$product['RAM']);?>">
+                      <input type="hidden" name="ram"  
+                      
+                      name="enhanced-select">
                         <i class="mdc-select__dropdown-icon"></i>
                         <div class="mdc-select__selected-text"></div> 
                             <div class="mdc-select__menu mdc-menu-surface demo-width-class">
@@ -146,7 +131,9 @@
  
 
                           <div class="mdc-select demo-width-class" data-mdc-auto-init="MDCSelect">
-                      <input type="hidden" name="memory" value="<?php echo set_value('memory',$product['memory']); ?>">
+                      <input type="hidden" 
+                      
+                      name="memory" name="enhanced-select">
                         <i class="mdc-select__dropdown-icon"></i>
                         <div class="mdc-select__selected-text"></div> 
                             <div class="mdc-select__menu mdc-menu-surface demo-width-class">
@@ -168,13 +155,29 @@
                                 <span class="mdc-floating-label">Product Memory</span>
                                
                             <div class="mdc-line-ripple"></div>
-                          </div> 
+                          </div>
 
  
-
+                          <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                          <input type="number" name="stock" 
+                          value="<?php echo set_value('stock',$product['stock']);?>"
+                          class="mdc-text-field__input" id="text-field-hero-input">
+                          <?php echo form_error('stock'); ?>
+                          <div class="mdc-notched-outline">
+                            <div class="mdc-notched-outline__leading"></div>
+                            <div class="mdc-notched-outline__notch">
+                              <label for="text-field-hero-input" class="mdc-floating-label">Stock Quantity</label>
+                            </div>
+                            <div class="mdc-notched-outline__trailing"></div>
+                          </div>
+                        </div>
+                    </div>  
+                      
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                           <div class="mdc-text-field mdc-text-field--outlined">
-                            <input type="number" name="price" value="<?php echo set_value('price',$product['price']);?>" class="mdc-text-field__input" id="text-field-hero-input">
+                            <input type="number" name="price" value="<?php echo set_value('price',$product['price']);?>"
+                             class="mdc-text-field__input" id="text-field-hero-input">
                             <?php echo form_error('price'); ?>
                             <div class="mdc-notched-outline">
                               <div class="mdc-notched-outline__leading"></div>
@@ -193,8 +196,8 @@
                                    Add Product
                                </button>
                             </div>
-                        </div> 
- -->
+                        </div> -->
+ 
 
 
 
@@ -202,8 +205,6 @@
                             <button class="mdc-button mdc-button--raised" value="save" name="save">Create</button>
                             <a href="<?php echo base_url().'index.php/Product_CI/viewproduct';?>" class="mdc-button mdc-button--raised filled-button--dark mdc-ripple-upgraded">Cancel</a>
                         </div>
-
-      
                    </form>
                      
 
