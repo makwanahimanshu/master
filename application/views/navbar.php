@@ -16,6 +16,7 @@
               </div>
             </div>
           </div>
+
           <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end mdc-top-app-bar__section-right">
             <div class="menu-button-container menu-profile d-none d-md-block">
               <button class="mdc-button mdc-menu-button">
@@ -28,6 +29,14 @@
               </button>
               <div class="mdc-menu mdc-menu-surface" tabindex="-1">
                 <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+                <li class="mdc-list-item" role="menuitem">
+                    <div class="item-thumbnail item-thumbnail-icon-only">
+                      <i class="mdi mdi-account-edit-outline text-primary"></i>
+                    </div>
+                    <div class="item-content d-flex align-items-start flex-column justify-content-center">
+                    <a href="<?php echo $base.'index.php/User_CI/viewuser';?>"><h6 class="item-subject font-weight-normal">View profile</h6></a>
+                    </div>
+                  </li>
                   <li class="mdc-list-item" role="menuitem">
                     <div class="item-thumbnail item-thumbnail-icon-only">
                       <i class="mdi mdi-account-edit-outline text-primary"></i>
@@ -36,6 +45,7 @@
                       <h6 class="item-subject font-weight-normal">Edit profile</h6>
                     </div>
                   </li>
+                  
                   <li class="mdc-list-item" role="menuitem">
                     <div class="item-thumbnail item-thumbnail-icon-only">
                       <i class="mdi mdi-settings-outline text-primary"></i>                      

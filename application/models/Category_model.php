@@ -5,7 +5,6 @@ class Category_model extends CI_model{
        
         $this->db->insert('category',$formArray); //INSERT INTO users (name,email,created) values(?,?,?);
     }
-
     public function all(){
 
         // echo "hyyy<pre>";

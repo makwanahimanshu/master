@@ -1,4 +1,10 @@
-    <!-- partial:../../partials/_sidebar.php -->
+  <?php
+// echo "hello<pre>";
+// print_r($brand);
+// exit;
+  ?>
+  
+  <!-- partial:../../partials/_sidebar.php -->
         <!-- $base.'index.php/Welcome/sidebar' -->
         <?php include_once "sidebar.php"; ?>
          
@@ -23,7 +29,7 @@
                   <form method="post" name="createBrand" action="<?php echo base_url().'index.php/Brand_CI/create1'; ?>">
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field mdc-text-field--outlined">
-                          <input type="text" name="brand_name" class="mdc-text-field__input" id="text-field-hero-input">
+                          <input type="text" name="brand_name" class="mdc-text-field__input" id="brand_name">
                           
                           <div class="mdc-notched-outline">
                             <div class="mdc-notched-outline__leading"></div>
@@ -42,6 +48,7 @@
                         <select class="form-control"  id="cat_id" name="cat_id">
 
                         <?php if(!empty($category)) { 
+                          echo "<option value=''>Select Categor</option>";
                             foreach($category as $category1){ ?>
                                 
                                 <option value="<?php echo $category1['cat_id'];?>"><?php echo $category1['cat_name'];?></option>

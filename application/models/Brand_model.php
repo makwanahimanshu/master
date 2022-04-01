@@ -25,25 +25,23 @@ class Brand_model extends CI_model{
         $formArray = array();
             $formArray  = array(
 
+                "brand_name" => $this->input->post('brand_name'),
+                "cat_id" => $this->input->post('cat_id'),    
 
                 "brand_name" => $this->input->post('brand_name'),
                 "cat_id" => $this->input->post('cat_id'),    
 
             );
-         
-            // echo "form aRAAY <pre>";
-            // print_r($formArray);
-            // exit;
-            $this->db->insert("brand",$formArray);
-      
+             $this->db->insert("brand",$formArray);
     }
- 
+
 
 
      public function cat(){
         // $this->db->where('cat_name',$cat_name);
-       $this->db->where('cat_id',1);
-       $category = $this->db->get('category')->result_array();       // select * from users where user_id = ?
+        $this->db->select('*');
+        $this->db->from('category');
+        return $category = $this->db->get()->result_array();       // select * from users where user_id = ?
         
     }
 
@@ -66,22 +64,17 @@ class Brand_model extends CI_model{
         return $brand = $this->db->get('brand')->row_array(); // select * from users where user_id = ?
     }
 
-    // public function editBrand($Id,$formArray){
-    //     $this->db->where('brand_id',$Id);
-    //     $this->db->update('brand',$formArray); //update users SET name = ? , email = ? where user_id = ? 
-        
-    // }
+    public function updateBrand($Id,$formArray){
+        $this->db->where('brand_id',$Id);
+        $this->db->update('brand',$formArray);
+        // echo "yes<pre>";
+        // print_r($_POST);
+        // exit;
+    }
 
     public function deleteBrand($Id){
         $this->db->where('brand_id',$Id);
         $this->db->delete('brand'); // DELETE FROM users Where user_id = ?
-  
-
-   // DELETE brand, category   FROM brand   INNER JOIN category ON brand.`cat_id`=category.`cat_id`    WHERE brand.`brand_id`=3;
-    // $this->db->delete('brand_name,cat_name');
-    // $this->db->from('brand');
-    // $this->db->join('category', 'brand.cat_id = category.cat_id');
-    //  return $brand  = $this->db->get()->result_array();
     }
 
    

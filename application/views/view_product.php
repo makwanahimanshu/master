@@ -27,6 +27,7 @@
                 <thead>
                   <tr class="table100-head">
                     <th class="column1">ID</th>
+                    <th class="column1">Brand Name</th>
                     <th class="column1">Product Name</th>
                     <th class="column2">Image</th>
                     <th class="column3">Discription</th>
@@ -51,7 +52,8 @@
                     <?php if(!empty($product)) { foreach($product as $product1) { ?>
                              <tr>
                       
-                      <td class="column1"><?php echo $product1['pro_details_id'];?></td>
+                      <td class="column1"><?php echo $product1['pro_id'];?></td>
+                      <td class="column1"><?php echo $product1['brand_name'];?></td>
                       <td class="column1"><?php echo $product1['pro_name'];?></td>
                       <td class="column2"><?php echo $product1['image'];?></td>
                       <td class="column3"><?php echo $product1['discription'];?></td>
@@ -61,10 +63,10 @@
                       <td class="column7"><?php echo $product1['price'];?></td>
                       
                     <td>
-                      <a href="<?php echo base_url().'index.php/Product_CI/editProduct/'.$product1['pro_details_id'] ?>" class="mdc-button mdc-button--raised filled-button--info mdc-ripple-upgraded">Edit</a>
+                      <a href="<?php echo base_url().'index.php/Product_CI/editProduct/'.$product1['pro_id'] ?>" class="mdc-button mdc-button--raised filled-button--info mdc-ripple-upgraded">Edit</a>
                     </td>
                     <td>
-                      <a href="<?php echo base_url().'index.php/Product_CI/deleteProduct/'.$product1['pro_details_id'] ?>" class="mdc-button mdc-button--raised filled-button--secondary mdc-ripple-upgraded">Delete</a>
+                      <a href="<?php echo base_url().'index.php/Product_CI/deleteProduct/'.$product1['pro_id'] ?>" class="mdc-button mdc-button--raised filled-button--secondary mdc-ripple-upgraded">Delete</a>
                     </td> 
                     </tr>   
                     <?php } } else { ?>
