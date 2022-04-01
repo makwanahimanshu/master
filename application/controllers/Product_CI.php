@@ -67,9 +67,9 @@ class Product_CI extends CI_Controller {
 
                     $this->load->view('edit_product',$data);
                 }else {
-                    echo "<pre>";
-                    print_r("$_POST");
-                    exit;
+                    // echo "<pre>";
+                    // print_r("$_POST");
+                    // exit;
 
                     //update product record
                     $formArray = array();
@@ -80,6 +80,7 @@ class Product_CI extends CI_Controller {
                     $formArray['stock'] = $this->input->post('stock');
                     $formArray['price'] = $this->input->post('price');
                     $this->Product_model->updateProduct($Id,$formArray);
+                   
                     $this->session->set_flashdata('success','Record updated successfully');
                     redirect(base_url().'index.php/Product_CI/viewproduct');
                 }

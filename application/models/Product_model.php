@@ -5,24 +5,22 @@ class Product_model extends CI_model{
     {
         $formArray=array();
         $formArray=array(
+          
             "image" => $this->input->post('image'),
             "discription" => $this->input->post('discription'),
             "ram" => $this->input->post('ram'),
             "memory" => $this->input->post('memory'),
             "stock" => $this->input->post('stock'),
             "price" => $this->input->post('price'),
+            "pro_id" => $this->input->post('pro_id'),
             
-            
+                
         );
-        
-            // print_r($formArray);
-            // exit;
-              
-       $this->db->insert('product_details',$formArray); //INSERT INTO users (name,email,created) values(?,?,?);
+       $this->db->insert('product',$formArray); //INSERT INTO users (name,email,created) values(?,?,?);
     }
 
 
-    // function create()
+    // public function create($data)
     // {
     //             $formArray = array();
     //             $formArray=array(
@@ -40,8 +38,8 @@ class Product_model extends CI_model{
     public function all(){
         
         $this->db->select('pro_details_id,pro_name,image,discription,RAM,memory,stock,price');
-        $this->db->from('product_details');
-       $this->db->join('product', 'product_details.pro_id = product.pro_id');
+        $this->db->from('product');
+       $this->db->join('product', 'product.pro_id = product.pro_id');
        // $this->db->join('brand', 'product.brand_id = brand.brand_name');
         return $product  = $this->db->get()->result_array();
 
@@ -51,12 +49,12 @@ class Product_model extends CI_model{
     
     public function getProduct($Id){
         $this->db->where('pro_details_id',$Id);
-        return $product = $this->db->get('product_details')->row_array(); // select * from users where user_id = ?
+        return $product = $this->db->get('product')->row_array(); // select * from users where user_id = ?
     }
 
     public function updateProduct($Id,$formArray){
         $this->db->where('pro_details_id',$Id);
-        $this->db->update('product_details',$formArray); //update users SET name = ? , email = ? where user_id = ? 
+        $this->db->update('product',$formArray); //update users SET name = ? , email = ? where user_id = ? 
         
     }
 

@@ -20,7 +20,7 @@
                   <div class="template-demo">
                   
 
-                  <form method="post" name="createBrand" action="<?php echo base_url().'index.php/Brand_CI/create'; ?>">
+                  <form method="post" name="createBrand" action="<?php echo base_url().'index.php/Brand_CI/create1'; ?>">
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field mdc-text-field--outlined">
                           <input type="text" name="brand_name" class="mdc-text-field__input" id="text-field-hero-input">
@@ -35,83 +35,27 @@
                         </div>
                       </div>
 
-                      <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="col-md-6 mb-4 pb-2">
                     <div class="form-group">
-                        <label class="form-label" >Country</label>
-                        <select class="form-control"  id="cat_id" name="cat_id" onkeypress="return countryOnly(event)">
+                        <label class="form-label" >Category</label>
+                        <select class="form-control"  id="cat_id" name="cat_id">
 
                         <?php if(!empty($category)) { 
-                            foreach($category as $country1){ ?>
+                            foreach($category as $category1){ ?>
                                 
-                                <option value="<?php echo $country1['cat_id'];?>"><?php echo $country1['cat_name'];?></option>
+                                <option value="<?php echo $category1['cat_id'];?>"><?php echo $category1['cat_name'];?></option>
                                 <?php } } else {
                               echo "data not found"  ;
                             } ?>
-                        
-                      
-                  
-                     <!--  <select class="form-control" id="cat_name" name="cat_name" >
-                        <i class="mdc-select__dropdown-icon"></i>
-                        <div class="mdc-select__selected-text"></div> 
-                            <div class="mdc-select__menu mdc-menu-surface demo-width-class">
-                                <?php if(!empty($category)) { 
-                                foreach($category as $category1){ ?>
-                                    
-                                    <option value="<?php echo $category1['cat_id'];?>"><?php echo $category1['cat_name'];?></option>
-                                    <?php } } else {
-                                  echo "data not found"  ;
-                                } ?>
-                              
-                            </div>
-                              <?php echo form_error('cat_name'); ?>
-                                <span class="mdc-floating-label">Product Memory</span>
-                               
-                            <div class="mdc-line-ripple"></div>
-                            </select>  -->
-                          
-                           
-           
-                
-<!--                        
-                          <div class="row">
-                            <div class="col-md-6 mb-4 pb-2">
-                                <div class="form-group">
-                                    
-                                    <label class="form-label" >Category</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                
-                                    <select class="form-control" id="cat_name" name="cat_name" >
-                                      <?php if(!empty($category)) { 
-                                        foreach($category as $category1){ ?>
-                                            
-                                            <option value="<?php echo $category1['cat_id'];?>"><?php echo $category1['cat_name'];?></option>
-                                            <?php } } else {
-                                          echo "data not found"  ;
-                                        } ?>
-                                        
-                                    </select>
-                                </div>
-                              
-                            </div>   -->
-                       
+                          </select>
+                       </div>
+                  </div>
+               
 
-
-                            <div class="col-md-6 mb-4 pb-2">
-                    <div class="form-group">
-                        <label class="form-label" >Country</label>
-                        <select class="form-control"  id="con_id" name="con_id" onkeypress="return countryOnly(event)">
-
-                        <?php if(!empty($country)) { 
-                            foreach($country as $country1){ ?>
-                                
-                                <option value="<?php echo $country1['con_id'];?>"><?php echo $country1['name'];?></option>
-                                <?php } } else {
-                              echo "data not found"  ;
-                            } ?>
-                        
-                 
 
                       <div class="mb-3">
-                            <button class="mdc-button mdc-button--raised" name="save" value="Save Data"/>Add Brand</button>
+                            <button class="mdc-button mdc-button--raised" name="save" value="save"/>Add Brand</button>
                             <a href="<?php echo base_url().'index.php/Brand_CI/viewbrand';?>" class="mdc-button mdc-button--raised filled-button--dark mdc-ripple-upgraded">Cancel</a>
                         </div>
                    </form>

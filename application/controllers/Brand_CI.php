@@ -3,66 +3,72 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Brand_CI extends CI_Controller {
 
-        // public function brand(){
-        //     $this->load->view('add_brand');
-        // }
-
-        public function __construct()
-	    {
+    public function __construct()
+	{
 		parent::__construct();
 		$this->load->database();
+        $this->load->helper(array('form', 'url'));
 		$this->load->library('form_validation');
         $this->load->model('Brand_model');
-        // $this->load->model('Category_model');
-        $this->form_validation->set_rules('brand_name','brand_name','required');
-        // $this->form_validation->set_rules('cat_name','cat_name','required');
-		}
 
+        // $this->form_validation->set_rules('image','Image','required');
+		// $category= $this->Brand_model->cat();
+		// $data = array();
+    	// $data['category'] = $category;
+	}
+  
 
         public function viewbrand(){
-         
-            // echo "tables dtaa";
-            // print_r($_POST);
-            // exit;
+
+            $this->load->model('Brand_model');
             $brand = $this->Brand_model->all();
-           // $category=$this->Brand_model->cat();
             $data = array();
             $data['brand'] = $brand;
-            //$data['category'] = $category;
             $this->load->view('view_brand',$data);
         }
 
-        public function create(){
-
-          if($this->form_validation->run() == false){
-               $this->load->view('add_brand');
-          } else {
-
-
-            
-            $category=$this->Brand_model->cat();
-            $data = array();
-            
-            $data['category'] = $category;
-            $this->load->view('add_brand',$data);
+             public function create(){
+           
+                $category= $this->Brand_model->cat();
+                $data = array();
+                $data['category'] = $category;
+                $this->load->view('add_brand',$data);
+             }
 
 
+             public function create1(){
 
+                $this->form_validation->set_rules('brand_name','brand_name','required');
+                if($this->form_validation->run() === TRUE)
+                    {
+                            if(isset($_POST['save'])){ 
+                                $this->Brand_model->create1($_POST);
+                                $this->session->set_flashdata('sucess','yes');
+                                redirect(base_url().'index.php/Brand_CI/viewbrand');  ;
+                                alert("data  inserted");
+                            }
+                            else{
+                                echo "no yes<pre>";
+                            
+                            }
+                        }
+                        else{
+                            echo "no";
+                            $this->load->view('add_brand');
+                        }
+                        
+                    
+                    }
 
-              $formArray = array();
-              $formArray['brand_name'] = $this->input->post('brand_name');
-            //   $formArray['cat_name'] = $this->input->post('cat_name');
-              $this->Brand_model->create($formArray); 
-            //   $this->Category_model->create($formArray); 
-             redirect(base_url().'index.php/Brand_CI/viewbrand'); 
+            	
 
-             
-            }  
-    
-      }
+	   
 
+   
 
         public function editBrand($Id){
+           
+            $this->load->model('Brand_model');
             $brand = $this->Brand_model->getBrand($Id);
             $data = array();
             $data['brand'] = $brand;
@@ -84,6 +90,7 @@ class Brand_CI extends CI_Controller {
 
 
         public function deleteBrand($Id){
+            $this->load->model('Brand_model');
             $brand = $this->Brand_model->getBrand($Id);
             if(empty($brand)){
                 $this->session->set_flashdata('failure','Record not found in database');
@@ -94,8 +101,7 @@ class Brand_CI extends CI_Controller {
             $this->session->set_flashdata('success','Record deleted successfully');
             redirect(base_url().'index.php/Brand_CI/viewbrand');
             }
-        
-   
+  
 }
           
 

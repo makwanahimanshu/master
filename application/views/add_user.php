@@ -1,4 +1,4 @@
-    <!-- partial:../../partials/_sidebar.php -->
+<!-- partial:../../partials/_sidebar.php -->
         <!-- $base.'index.php/Welcome/sidebar' -->
         <?php include_once "sidebar.php"; ?>
          
@@ -26,6 +26,18 @@
                           <label for="text-field-hero-input" class="mdc-floating-label">Name</label>
                         </div>
                       </div> -->
+                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                          <input type="text" class="mdc-text-field__input" id="text-field-hero-input">
+                          <div class="mdc-notched-outline">
+                            <div class="mdc-notched-outline__leading"></div>
+                            <div class="mdc-notched-outline__notch">
+                              <label for="text-field-hero-input" class="mdc-floating-label">TYPE</label>
+                            </div>
+                            <div class="mdc-notched-outline__trailing"></div>
+                          </div>
+                        </div>
+                      </div>
                       <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field mdc-text-field--outlined">
                           <input type="text" class="mdc-text-field__input" id="text-field-hero-input">

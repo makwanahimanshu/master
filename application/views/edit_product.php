@@ -50,7 +50,7 @@
                         </div>
                       </div> -->
                
-                 <form method="post" name="editProduct" action="<?php echo base_url().'index.php/Brand_CI/editBrand/'.$brand['brand_id']; ?>">
+                 <form method="post" name="editProduct" action="<?php echo base_url().'index.php/Product_CI/editProduct/'.$product['pro_id']; ?>">
                       <!-- <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field mdc-text-field--outlined">
                           <input type="text" name="name" value="<?php echo set_value('name');?>" class="mdc-text-field__input" id="text-field-hero-input">

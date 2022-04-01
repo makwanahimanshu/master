@@ -1,8 +1,8 @@
-<?php include("session_set.php"); ?>
+<?php include("sidebar.php"); ?>
 <header class="mdc-top-app-bar">
         <div class="mdc-top-app-bar__row">
           <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button sidebar-toggler">menu</button>
+            <!-- <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button sidebar-toggler">menu</button> -->
             <span class="mdc-top-app-bar__title">Hy Admin!</span>
             <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon search-text-field d-none d-md-flex">
               <i class="material-icons mdc-text-field__icon">search</i>
@@ -48,7 +48,8 @@
                 </ul>
               </div>
             </div>
-            <div class="divider d-none d-md-block"></div>
+            
+            <!-- <div class="divider d-none d-md-block"></div>
             <div class="menu-button-container d-none d-md-block">
               <button class="mdc-button mdc-menu-button">
                 <i class="mdi mdi-settings"></i>
@@ -73,7 +74,8 @@
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> -->
+
             <div class="menu-button-container">
               <button class="mdc-button mdc-menu-button">
                 <i class="mdi mdi-bell"></i>
@@ -161,6 +163,8 @@
                 </ul>
                 </div>
             </div> -->
+
+<!-- 
             <div class="menu-button-container d-none d-md-block">
               <button class="mdc-button mdc-menu-button">
                 <i class="mdi mdi-arrow-down-bold-box"></i>
@@ -185,7 +189,8 @@
                   </li>
                 </ul>
               </div>
-            </div>
+              </div> -->
+           
           </div>
         </div>
       </header>

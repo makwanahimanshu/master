@@ -46,10 +46,10 @@
                             <td class="column2"><?php echo $brand1['cat_name'];?></td>
                     
                     <td>
-                      <a href="<?php echo base_url().'index.php/Brand_CI/editBrand/'.$brand1['brand_id'] ?>" class="btn btn-primary">Edit</a>
+                      <a href="<?php echo base_url().'index.php/Brand_CI/editBrand/'.$brand1['brand_id'] ?>" class="mdc-button mdc-button--raised filled-button--info mdc-ripple-upgraded">Edit</a>
                     </td>
                     <td>
-                      <a href="<?php echo base_url().'index.php/Brand_CI/deleteBrand/'.$brand1['brand_id'] ?>" class="btn btn-danger">Delete</a>
+                      <a href="<?php echo base_url().'index.php/Brand_CI/deleteBrand/'.$brand1['brand_id'] ?>" class="mdc-button mdc-button--raised filled-button--secondary mdc-ripple-upgraded">Delete</a>
                     </td>
 
                    </tr>   

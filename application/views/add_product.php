@@ -1,27 +1,4 @@
-<!-- partial:../../partials/_sidebar.php -->
-
-
-    <!-- <script>
-  function validateForm() {
-  var lsname=document.myForm.discription.value ; 
-            //var lsname = document.forms["myForm"]["last_name"];  
-            
-             if ( lsname == '' ){ 
-                 document.getElementById('errorname').innerHTML="Please enter a valid name";  
-                 lsname.focus(); 
-                 return false; 
-             }
-           } </script>
-
-    <style>
-         .error{
-            color: #D8000C;
-            background-color: #FFBABA;
-         }
-      </style> -->
-
-
-        <!-- $base.'index.php/Welcome/sidebar' -->
+ <!-- $base.'index.php/Welcome/sidebar' -->
         <?php include_once "sidebar.php"; ?>
          
          <!-- partial -->
@@ -65,10 +42,10 @@
                        </div> -->
 
                        
-                     <!-- <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
+                     <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-6-desktop">
                         <div class="mdc-text-field mdc-text-field--outlined">
                         <b><?php if(isset($response)) echo $response; ?></b>
-                        <input type="file" name="file" value="<?php echo set_value('image');?>" class="mdc-text-field__input" id="image">
+                    <input type="file" name="image" value="<?php echo set_value('image');?>" class="mdc-text-field__input" id="image">    
                        <?php echo form_error('image'); ?>
                           <div class="mdc-notched-outline">
                             <div class="mdc-notched-outline__leading"></div>
@@ -79,9 +56,9 @@
                           </div>
                         </div>
                       </div>     
-                <div style="color:red;"><?php echo form_error('file'); ?></div>  -->
+                <div style="color:red;"><?php echo form_error('file'); ?></div> 
  
-                <input type="file" name="image" value="<?php echo set_value('image');?>" class="mdc-text-field__input" id="image">
+               
                 
             
 

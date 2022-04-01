@@ -56,10 +56,10 @@
                             
                                            
                    <td>
-                     <a href="<?php echo base_url().'index.php/Category_CI/editCategory/'.$category1['cat_id'] ?>" class="btn btn-primary">Edit</a>
+                     <a href="<?php echo base_url().'index.php/Category_CI/editCategory/'.$category1['cat_id'] ?>" class="mdc-button mdc-button--raised filled-button--info mdc-ripple-upgraded">Edit</a>
                    </td> 
                    <td>
-                     <a href="<?php echo base_url().'index.php/Category_CI/deleteCategory/'.$category1['cat_id'] ?>" class="btn btn-danger">Delete</a>
+                     <a href="<?php echo base_url().'index.php/Category_CI/deleteCategory/'.$category1['cat_id'] ?>" class="mdc-button mdc-button--raised filled-button--secondary mdc-ripple-upgraded">Delete</a>
                    </td>
                    </tr>   
                    <?php } } else { ?>
